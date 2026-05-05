@@ -15,7 +15,6 @@
             color: #fff;
             overflow-x: hidden;
         }
-        /* Animated gradient background */
         .bg-gradient {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%; z-index: -2;
@@ -28,7 +27,7 @@
         @keyframes bgPulse { 0% { opacity: 0.7; filter: hue-rotate(0deg); } 50% { opacity: 1; filter: hue-rotate(15deg); } 100% { opacity: 0.7; filter: hue-rotate(0deg); } }
         .container { max-width: 1400px; margin: 0 auto; padding: 0 32px; position: relative; z-index: 10; }
 
-        /* Header (unchanged from previous working version) */
+        /* Header */
         header { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; flex-wrap: wrap; gap: 20px; border-bottom: 1px solid rgba(255,255,255,0.05); }
         .logo { display: flex; align-items: center; gap: 12px; }
         .logo-vector { width: 55px; height: 55px; animation: floatLogo 4s ease-in-out infinite; }
@@ -46,7 +45,7 @@
         .nav-link.highlight { background: linear-gradient(135deg,#8b5cf6,#f59e0b); color: #fff; border: none; }
         .mobile-menu-btn { display: none; background: rgba(255,255,255,0.05); border: none; color: #fff; font-size: 24px; padding: 10px; border-radius: 12px; cursor: pointer; }
 
-        /* Hero, Services, Portfolio, About, Testimonials, Pricing, Tech Support (same as final working version) – abbreviated for brevity, but fully functional */
+        /* Hero */
         .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; padding: 60px 0 80px; }
         .hero-content { animation: fadeInUp 0.8s ease-out; }
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
@@ -63,7 +62,7 @@
         .btn-group { display: flex; gap: 16px; flex-wrap: wrap; }
         .btn { padding: 14px 32px; border-radius: 50px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; font-size: 16px; border: none; cursor: pointer; }
         .btn-primary { background: linear-gradient(135deg,#f59e0b,#8b5cf6); color: #fff; box-shadow: 0 10px 30px rgba(139,92,246,0.3); }
-        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 20px 40px rgba(139,92,246,0.4); }
+        .btn-primary:hover { transform: translateY(-3px); }
         .btn-outline { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.2); }
         .btn-outline:hover { border-color: #f59e0b; background: rgba(139,92,246,0.1); transform: translateY(-3px); }
         .hero-visual { position: relative; animation: fadeInRight 0.8s ease-out; }
@@ -72,13 +71,14 @@
         @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
         .section-title { text-align: center; margin-bottom: 60px; }
         .section-title h2 { font-size: clamp(32px,5vw,48px); font-weight: 700; margin-bottom: 16px; }
-        .services-grid, .portfolio-grid, .testimonials-grid, .pricing-grid { display: grid; gap: 30px; padding: 40px 0; }
-        .services-grid { grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); }
+
+        /* Services, Portfolio, About, Testimonials, Pricing, Tech Support */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 30px; padding: 40px 0; }
         .service-card { background: rgba(20,20,40,0.5); backdrop-filter: blur(15px); border-radius: 24px; padding: 36px 28px; text-align: center; transition: 0.3s; border: 1px solid rgba(255,255,255,0.08); }
         .service-card:hover { transform: translateY(-10px); border-color: rgba(139,92,246,0.3); }
         .service-icon { width: 70px; height: 70px; background: linear-gradient(135deg, rgba(139,92,246,0.2), rgba(6,182,212,0.2)); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; border: 1px solid rgba(139,92,246,0.3); }
         .service-icon i { font-size: 32px; color: #f59e0b; }
-        .portfolio-grid { grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); }
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); gap: 30px; padding: 40px 0; }
         .portfolio-item { background: rgba(20,20,40,0.5); backdrop-filter: blur(15px); border-radius: 28px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); transition: 0.3s; }
         .portfolio-item:hover { transform: translateY(-8px); border-color: rgba(139,92,246,0.4); }
         .portfolio-image { height: 220px; background: linear-gradient(135deg,#1a1a2e,#0f0f1c); display: flex; align-items: center; justify-content: center; }
@@ -90,9 +90,9 @@
         .about-image img { width: 100%; height: auto; display: block; }
         .skills { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
         .skill-tag { background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.3); padding: 8px 18px; border-radius: 30px; font-size: 13px; }
-        .testimonials-grid { grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); }
-        .testimonial-card { background: rgba(20,20,40,0.6); backdrop-filter: blur(15px); border-radius: 28px; padding: 32px; border: 1px solid rgba(255,255,255,0.08); transition: 0.3s; }
-        .pricing-grid { grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); gap: 30px; padding: 40px 0; }
+        .testimonial-card { background: rgba(20,20,40,0.6); backdrop-filter: blur(15px); border-radius: 28px; padding: 32px; border: 1px solid rgba(255,255,255,0.08); }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 30px; padding: 40px 0; }
         .pricing-card { background: rgba(20,20,40,0.5); backdrop-filter: blur(15px); border-radius: 28px; padding: 40px 30px; border: 1px solid rgba(255,255,255,0.08); transition: 0.3s; position: relative; }
         .pricing-card.featured { border-color: rgba(139,92,246,0.4); background: linear-gradient(135deg, rgba(139,92,246,0.1), rgba(6,182,212,0.1)); }
         .pricing-card.featured::before { content: '⭐ Most Popular'; position: absolute; top: 20px; right: -35px; background: linear-gradient(135deg,#f59e0b,#8b5cf6); color: #fff; padding: 5px 40px; font-size: 12px; font-weight: 600; transform: rotate(45deg); }
@@ -112,64 +112,51 @@
         .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 40px; margin-bottom: 30px; }
         .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.05); color: #71717a; }
 
-        /* Premium Download Cards (Founder’s Card & Brochure) */
-        .premium-downloads {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            gap: 40px;
-            margin: 60px 0;
-        }
-        .premium-card {
-            background: rgba(20, 20, 40, 0.6);
-            backdrop-filter: blur(15px);
-            border-radius: 32px;
-            padding: 40px;
-            border: 1px solid rgba(139, 92, 246, 0.3);
-            transition: 0.3s;
-        }
-        .premium-card:hover { transform: translateY(-8px); border-color: rgba(139,92,246,0.6); box-shadow: 0 20px 30px rgba(0,0,0,0.3); }
+        /* Premium Downloads */
+        .premium-downloads { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 40px; margin: 60px 0; }
+        .premium-card { background: rgba(20,20,40,0.6); backdrop-filter: blur(15px); border-radius: 32px; padding: 40px; border: 1px solid rgba(139,92,246,0.3); transition: 0.3s; }
+        .premium-card:hover { transform: translateY(-8px); border-color: rgba(139,92,246,0.6); }
         .premium-title { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; }
         .premium-title i { font-size: 42px; color: #f59e0b; }
-        .preview-box {
-            background: linear-gradient(135deg, #0f0f1c, #1a1a2e);
-            border-radius: 20px;
-            padding: 25px;
-            margin: 20px 0;
-            border: 1px solid rgba(139,92,246,0.4);
-        }
-        .founder-card .card-front {
-            background: linear-gradient(135deg, #0f0f1c, #1a1a2e);
-            border-radius: 16px;
-            padding: 20px;
-        }
+        .preview-box { background: linear-gradient(135deg, #0f0f1c, #1a1a2e); border-radius: 20px; padding: 25px; margin: 20px 0; border: 1px solid rgba(139,92,246,0.4); }
+        .founder-card .card-front { background: linear-gradient(135deg, #0f0f1c, #1a1a2e); border-radius: 16px; padding: 20px; }
         .card-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
         .card-logo-icon { width: 40px; height: 40px; background: linear-gradient(135deg,#8b5cf6,#06b6d4); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
         .card-logo-icon i { font-size: 20px; color: #fff; }
-        .card-logo-text h4 { font-size: 18px; }
+        .card-logo-text h4 { font-size: 18px; color: #fff; }
         .card-logo-text p { font-size: 8px; color: #f59e0b; }
-        .card-name { font-size: 20px; font-weight: 700; margin: 15px 0 5px; }
+        .card-name { font-size: 20px; font-weight: 700; margin: 15px 0 5px; color: #fff; }
         .card-title { color: #f59e0b; font-size: 12px; margin-bottom: 15px; }
         .card-contact { font-size: 11px; color: #a1a1aa; margin: 8px 0; display: flex; align-items: center; gap: 8px; }
-        .download-pdf-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: linear-gradient(135deg, #f59e0b, #8b5cf6);
-            padding: 14px 28px;
-            border-radius: 40px;
-            font-weight: 600;
-            margin-top: 20px;
-            transition: 0.3s;
-            cursor: pointer;
-            border: none;
-            color: #fff;
-            font-size: 16px;
-            width: 100%;
-            justify-content: center;
-        }
+        .download-pdf-btn { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg,#f59e0b,#8b5cf6); padding: 14px 28px; border-radius: 40px; font-weight: 600; margin-top: 20px; transition: 0.3s; cursor: pointer; border: none; color: #fff; font-size: 16px; width: 100%; justify-content: center; }
         .download-pdf-btn:hover { transform: translateY(-2px); gap: 15px; }
 
-        /* Modal & Floating Gift (same as before) */
+        /* Brochure White Background (Fixed) */
+        .brochure-white {
+            background: #ffffff !important;
+            color: #1a1a2e !important;
+        }
+        .brochure-white .card-logo-text h4,
+        .brochure-white .card-name,
+        .brochure-white h3,
+        .brochure-white p,
+        .brochure-white .card-contact {
+            color: #1a1a2e !important;
+        }
+        .brochure-white .card-logo-text p,
+        .brochure-white .card-title {
+            color: #f59e0b !important;
+        }
+        .brochure-white .price-box {
+            background: #f0f0f5 !important;
+            color: #1a1a2e !important;
+        }
+        .brochure-white .service-tag {
+            background: rgba(139,92,246,0.15) !important;
+            color: #1a1a2e !important;
+        }
+
+        /* Modal */
         .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); backdrop-filter: blur(10px); z-index: 2000; align-items: center; justify-content: center; }
         .modal.active { display: flex; }
         .modal-content { background: linear-gradient(135deg,#1a1a2e,#0f0f1c); border-radius: 32px; padding: 40px; max-width: 500px; width: 90%; border: 1px solid rgba(139,92,246,0.4); position: relative; animation: modalFadeIn 0.3s; }
@@ -179,10 +166,27 @@
         .form-group input { width: 100%; padding: 14px 18px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; color: #fff; font-family: inherit; font-size: 14px; }
         .form-group input:focus { outline: none; border-color: #f59e0b; }
         .modal-submit { width: 100%; padding: 14px; background: linear-gradient(135deg,#f59e0b,#8b5cf6); border: none; border-radius: 40px; color: #fff; font-weight: 600; cursor: pointer; margin-top: 10px; }
+
+        /* Floating Elements */
         .floating-gift { position: fixed; bottom: 30px; right: 30px; background: linear-gradient(135deg,#f59e0b,#ec4899); padding: 12px 24px; border-radius: 50px; display: flex; align-items: center; gap: 12px; cursor: pointer; z-index: 100; box-shadow: 0 5px 20px rgba(245,158,11,0.5); animation: bounce 2s infinite; font-weight: 600; color: #fff; }
         @keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
-        .chatbot-container { position: fixed; bottom: 30px; right: 160px; z-index: 1000; }
+        .chatbot-container { position: fixed; bottom: 30px; right: 170px; z-index: 1000; }
         .chatbot-toggle { width: 60px; height: 60px; background: linear-gradient(135deg,#f59e0b,#8b5cf6); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 10px 30px rgba(139,92,246,0.5); animation: pulseGlow 2s infinite; }
+        .chatbot-toggle i { font-size: 30px; color: #fff; }
+        .chatbot-window { position: absolute; bottom: 80px; right: 0; width: 350px; height: 480px; background: rgba(15,15,30,0.98); backdrop-filter: blur(30px); border-radius: 24px; border: 1px solid rgba(139,92,246,0.4); display: none; flex-direction: column; overflow: hidden; }
+        .chatbot-window.active { display: flex; }
+        .chatbot-header { background: linear-gradient(135deg,#f59e0b,#8b5cf6); padding: 16px; display: flex; align-items: center; gap: 12px; }
+        .chatbot-messages { flex: 1; padding: 16px; overflow-y: auto; }
+        .message { display: flex; gap: 8px; margin-bottom: 12px; }
+        .message.bot { justify-content: flex-start; }
+        .message.user { justify-content: flex-end; }
+        .message-content { background: rgba(255,255,255,0.1); padding: 10px 14px; border-radius: 18px; max-width: 75%; font-size: 13px; }
+        .message.user .message-content { background: linear-gradient(135deg,#f59e0b,#8b5cf6); }
+        .quick-replies { display: flex; flex-wrap: wrap; gap: 8px; padding: 12px; border-top: 1px solid rgba(255,255,255,0.1); }
+        .quick-reply { background: rgba(255,255,255,0.08); border: 1px solid rgba(139,92,246,0.3); padding: 6px 12px; border-radius: 30px; font-size: 11px; cursor: pointer; }
+        .chatbot-input { display: flex; gap: 8px; padding: 12px; border-top: 1px solid rgba(255,255,255,0.1); }
+        .chatbot-input input { flex: 1; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 10px; border-radius: 30px; color: #fff; }
+        .chatbot-input button { width: 40px; height: 40px; background: linear-gradient(135deg,#f59e0b,#8b5cf6); border: none; border-radius: 50%; color: #fff; cursor: pointer; }
         .whatsapp-float { position: fixed; bottom: 30px; left: 30px; background: #25D366; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; color: #fff; text-decoration: none; z-index: 100; animation: pulseGreen 2s infinite; }
         .telegram-float { position: fixed; bottom: 30px; left: 100px; background: #0088cc; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; color: #fff; text-decoration: none; z-index: 100; }
         @keyframes pulseGreen { 0%,100% { box-shadow: 0 5px 20px rgba(37,211,102,0.4); } 50% { box-shadow: 0 5px 30px rgba(37,211,102,0.7); } }
@@ -193,8 +197,7 @@
             nav.show { display: flex; }
             .mobile-menu-btn { display: block; }
             .floating-gift { bottom: 100px; right: 20px; padding: 8px 16px; font-size: 12px; }
-            .chatbot-container { right: 110px; bottom: 30px; }
-            .chatbot-toggle { width: 50px; height: 50px; }
+            .chatbot-container { right: 120px; bottom: 30px; }
         }
         @media (min-width: 769px) { nav { display: flex !important; } }
     </style>
@@ -202,10 +205,10 @@
 <body>
 <div class="bg-gradient"></div>
 <div class="container">
-    <!-- Header (same as before) -->
+    <!-- Header -->
     <header>
         <div class="logo">
-            <div class="logo-vector"><svg viewBox="0 0 100 100"><path d="M50,25 L55,38 L58,50 L55,62 L50,68 L45,62 L42,50 L45,38 L50,25 Z" fill="none" stroke="url(#logoGrad1)" stroke-width="2.5"><animate attributeName="stroke-dasharray" values="0,200;200,0" dur="3s" repeatCount="indefinite"/></path><circle cx="50" cy="25" r="4" fill="#f59e0b"><animate attributeName="r" values="3;5;3" dur="1.5s" repeatCount="indefinite"/></circle><circle cx="35" cy="50" r="3" fill="#06b6d4"><animate attributeName="r" values="2;4;2" dur="1.8s" repeatCount="indefinite"/></circle><circle cx="65" cy="50" r="3" fill="#ec4899"><animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite"/></circle><circle r="3" fill="#f59e0b" opacity="0.9"><animateMotion dur="4s" repeatCount="indefinite" path="M50,15 A35,35 0 1,1 49,15"/></circle></svg></div>
+            <div class="logo-vector"><svg viewBox="0 0 100 100"><defs><linearGradient id="lg"><stop offset="0%" stop-color="#8b5cf6"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient></defs><path d="M50,25 L55,38 L58,50 L55,62 L50,68 L45,62 L42,50 L45,38 L50,25 Z" fill="none" stroke="url(#lg)" stroke-width="2.5"><animate attributeName="stroke-dasharray" values="0,200;200,0" dur="3s" repeatCount="indefinite"/></path><circle cx="50" cy="25" r="4" fill="#f59e0b"><animate attributeName="r" values="3;5;3" dur="1.5s" repeatCount="indefinite"/></circle><circle cx="35" cy="50" r="3" fill="#06b6d4"><animate attributeName="r" values="2;4;2" dur="1.8s" repeatCount="indefinite"/></circle><circle cx="65" cy="50" r="3" fill="#ec4899"><animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite"/></circle><circle r="3" fill="#f59e0b" opacity="0.9"><animateMotion dur="4s" repeatCount="indefinite" path="M50,15 A35,35 0 1,1 49,15"/></circle></svg></div>
             <div class="logo-text"><div class="logo-main"><span class="addis">Addis</span><span class="power">Power</span></div><div class="logo-sub">Web · Design · Support</div></div>
         </div>
         <button class="mobile-menu-btn" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
@@ -220,7 +223,7 @@
         </nav>
     </header>
 
-    <!-- Hero section (with full animation) -->
+    <!-- Hero -->
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="badge"><i class="fas fa-sparkles"></i><span>AI-Powered Web Solutions</span></div>
@@ -228,33 +231,30 @@
             <p>We combine AI with cutting-edge web development to create stunning websites that drive results for Ethiopian businesses.</p>
             <div class="startup-banner"><i class="fas fa-rocket"></i><span>🇪🇹 Web, Design & Tech Support for Startups — From 7,000 ETB</span></div>
             <div class="stats"><div class="stat-item"><h3>120+</h3><p>Projects</p></div><div class="stat-item"><h3>7,000 ETB</h3><p>Starting Price</p></div><div class="stat-item"><h3>24/7</h3><p>Support</p></div></div>
-            <div class="btn-group">
-                <a href="#contact" class="btn btn-primary"><i class="fas fa-rocket"></i> Start Project</a>
-                <a href="#" class="btn btn-outline" onclick="openGiftModal()"><i class="fas fa-gift"></i> Free Business Card</a>
-            </div>
+            <div class="btn-group"><a href="#contact" class="btn btn-primary"><i class="fas fa-rocket"></i> Start Project</a><a href="#" class="btn btn-outline" onclick="openGiftModal()"><i class="fas fa-gift"></i> Free Business Card</a></div>
         </div>
-        <div class="hero-visual">
-            <div class="vector-card">
-                <svg viewBox="0 0 500 400"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#8b5cf6"><animate attributeName="stop-color" values="#8b5cf6;#06b6d4;#ec4899;#8b5cf6" dur="8s" repeatCount="indefinite"/></stop><stop offset="100%" stop-color="#06b6d4"><animate attributeName="stop-color" values="#06b6d4;#ec4899;#8b5cf6;#06b6d4" dur="8s" repeatCount="indefinite"/></stop></linearGradient></defs><circle cx="250" cy="200" r="180" fill="none" stroke="url(#grad1)" stroke-width="1" opacity="0.2"><animate attributeName="r" values="180;200;180" dur="6s" repeatCount="indefinite"/></circle><path d="M200,180 Q200,130 250,130 Q300,130 300,180 Q300,210 280,220 Q270,225 270,240 L260,260 L240,260 L230,240 Q230,225 220,220 Q200,210 200,180 Z" fill="none" stroke="url(#grad1)" stroke-width="3"><animate attributeName="stroke-dasharray" values="0,500;500,0" dur="4s" repeatCount="indefinite"/></path><text x="250" y="360" text-anchor="middle" fill="#fff" font-size="14">Web · Design · Tech Support</text><text x="250" y="385" text-anchor="middle" fill="#a1a1aa" font-size="12">Startups from 7,000 ETB</text></svg>
-            </div>
-        </div>
+        <div class="hero-visual"><div class="vector-card"><svg viewBox="0 0 500 400"><defs><linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#8b5cf6"><animate attributeName="stop-color" values="#8b5cf6;#06b6d4;#ec4899;#8b5cf6" dur="8s" repeatCount="indefinite"/></stop><stop offset="100%" stop-color="#06b6d4"><animate attributeName="stop-color" values="#06b6d4;#ec4899;#8b5cf6;#06b6d4" dur="8s" repeatCount="indefinite"/></stop></linearGradient></defs><circle cx="250" cy="200" r="180" fill="none" stroke="url(#g1)" stroke-width="1" opacity="0.2"><animate attributeName="r" values="180;200;180" dur="6s" repeatCount="indefinite"/></circle><path d="M200,180 Q200,130 250,130 Q300,130 300,180 Q300,210 280,220 Q270,225 270,240 L260,260 L240,260 L230,240 Q230,225 220,220 Q200,210 200,180 Z" fill="none" stroke="url(#g1)" stroke-width="3"><animate attributeName="stroke-dasharray" values="0,500;500,0" dur="4s" repeatCount="indefinite"/></path><text x="250" y="360" text-anchor="middle" fill="#fff" font-size="14">Web · Design · Tech Support</text><text x="250" y="385" text-anchor="middle" fill="#a1a1aa" font-size="12">Startups from 7,000 ETB</text></svg></div></div>
     </section>
 
-    <!-- Services, Portfolio, About, Testimonials, Pricing, Tech Support (shortened for brevity but functional) -->
-    <section id="services"><div class="section-title"><h2>Our <span class="gradient-text">Services</span></h2><p>Complete digital solutions</p></div><div class="services-grid"><div class="service-card"><div class="service-icon"><i class="fas fa-code"></i></div><h3>Web Development</h3><p>From 7,000 ETB</p></div><div class="service-card"><div class="service-icon"><i class="fas fa-id-card"></i></div><h3>Business Cards</h3><p>Free gift for visitors!</p></div><div class="service-card"><div class="service-icon"><i class="fas fa-brochure"></i></div><h3>Brochures & Flyers</h3><p>Marketing materials</p></div><div class="service-card"><div class="service-icon"><i class="fas fa-headset"></i></div><h3>Tech Support</h3><p>24/7 maintenance</p></div></div></section>
+    <!-- Services -->
+    <section id="services"><div class="section-title"><h2>Our <span class="gradient-text">Services</span></h2></div><div class="services-grid"><div class="service-card"><div class="service-icon"><i class="fas fa-code"></i></div><h3>Web Development</h3><p>From 7,000 ETB</p></div><div class="service-card"><div class="service-icon"><i class="fas fa-id-card"></i></div><h3>Business Cards</h3><p>Free gift for visitors!</p></div><div class="service-card"><div class="service-icon"><i class="fas fa-brochure"></i></div><h3>Brochures & Flyers</h3><p>Marketing materials</p></div><div class="service-card"><div class="service-icon"><i class="fas fa-headset"></i></div><h3>Tech Support</h3><p>24/7 maintenance</p></div></div></section>
 
+    <!-- Portfolio -->
     <section id="portfolio"><div class="section-title"><h2>Featured <span class="gradient-text">Portfolio</span></h2></div><div class="portfolio-grid"><div class="portfolio-item"><div class="portfolio-image"><i class="fas fa-robot"></i></div><div class="portfolio-info"><h3>Habesha AI Assistant</h3><p>Ethiopian language chatbot</p></div></div><div class="portfolio-item"><div class="portfolio-image"><i class="fas fa-store"></i></div><div class="portfolio-info"><h3>Addis Market Hub</h3><p>Online marketplace</p></div></div></div></section>
 
+    <!-- About -->
     <section id="about" class="about-section"><div class="section-title"><h2>About <span class="gradient-text">The Founder</span></h2></div><div class="about-grid"><div class="about-image"><img src="https://raw.githubusercontent.com/Addis477/profilo/3a2f55b2c3f93af3487b44b09c8d80e4528c8a20/founder.jpg" alt="Addis Abebayehu"></div><div class="about-content"><h3>Addis Abebayehu</h3><div class="about-title">Founder & Lead Developer</div><p>Passionate developer helping Ethiopian startups grow.</p><div class="skills"><span class="skill-tag">Web Dev</span><span class="skill-tag">AI</span><span class="skill-tag">Design</span></div></div></div></section>
 
+    <!-- Testimonials -->
     <section id="testimonials" class="testimonials-section"><div class="section-title"><h2>Client <span class="gradient-text">Testimonials</span></h2></div><div class="testimonials-grid"><div class="testimonial-card"><p>"Addis Power transformed our online presence!"</p><div class="testimonial-author"><div class="author-avatar">SA</div><div><h4>Samuel A.</h4><p>CEO, EthioTech</p></div></div></div></div></section>
 
+    <!-- Pricing -->
     <section id="pricing"><div class="section-title"><h2>Flexible <span class="gradient-text">Pricing</span></h2></div><div class="pricing-grid"><div class="pricing-card"><div class="price-amount">7,000 ETB</div><h3>Starter</h3><ul class="price-features"><li>5-Page Website</li><li>Business Card</li><li>1 Month Support</li></ul></div><div class="pricing-card featured"><div class="price-amount">15,000 ETB</div><h3>Professional</h3><ul class="price-features"><li>10-Page Website</li><li>AI Chatbot</li><li>Business Cards + Brochure</li><li>3 Months Support</li></ul></div><div class="pricing-card"><div class="price-amount">Custom</div><h3>Enterprise</h3><ul class="price-features"><li>Unlimited Pages</li><li>Full AI Suite</li><li>24/7 Priority Support</li></ul></div></div></section>
 
-    <!-- Tech Support (no prices) -->
+    <!-- Tech Support -->
     <div class="tech-support"><h2 style="font-size:32px;">💻 <span class="gradient-text">Technical Support</span> Plans</h2><div class="support-plans"><div class="support-plan"><i class="fas fa-clock"></i><h3>Basic</h3><ul><li>Weekly backups</li><li>Security monitoring</li></ul></div><div class="support-plan"><i class="fas fa-crown"></i><h3>Professional</h3><ul><li>Daily backups</li><li>Priority support</li><li>Content updates</li></ul></div><div class="support-plan"><i class="fas fa-infinity"></i><h3>Enterprise</h3><ul><li>24/7 dedicated</li><li>Real-time monitoring</li><li>Instant response</li></ul></div></div></div>
 
-    <!-- ========== PREMIUM DOWNLOADS SECTION (Founder's Card + Brochure) ========== -->
+    <!-- PREMIUM DOWNLOADS: Founder Card + Brochure (Brochure now has WHITE BACKGROUND) -->
     <div class="premium-downloads">
         <!-- Founder's Business Card -->
         <div class="premium-card founder-card">
@@ -265,8 +265,8 @@
                     <div class="card-name">Addis Abebayehu</div>
                     <div class="card-title">Founder & Lead Developer</div>
                     <div class="card-contact"><i class="fas fa-phone"></i> +251 911 573 334</div>
-                    <div class="card-contact"><i class="fab fa-telegram"></i> @powr_addis</div>
-                    <div class="card-contact"><i class="fas fa-envelope"></i> agoodperception@gmail.com</div>
+                    <div class="card-contact"><i class="fab fa-telegram"></i> @addis_power</div>
+                    <div class="card-contact"><i class="fas fa-envelope"></i> addispower@proton.me</div>
                     <div class="card-contact"><i class="fas fa-globe"></i> addispower.com</div>
                 </div>
             </div>
@@ -274,75 +274,63 @@
             <p style="color:#71717a; font-size:12px; margin-top:12px;">📄 Print-ready PDF | Professional design</p>
         </div>
 
-        <!-- Company Brochure (Services, Pricing, Contact) -->
+        <!-- Company Brochure - WHITE BACKGROUND with dark text -->
         <div class="premium-card brochure-card">
             <div class="premium-title"><i class="fas fa-brochure"></i><h3>Company Brochure</h3></div>
-            <div class="preview-box">
+            <div class="preview-box brochure-white" style="background: #ffffff !important;">
                 <div style="text-align:center;">
-                    <div class="card-logo" style="justify-content:center;"><div class="card-logo-icon"><i class="fas fa-brain"></i></div><div class="card-logo-text"><h4>Addis Power</h4><p>Web · AI · Support</p></div></div>
-                    <h3 style="margin:20px 0;">Complete Tech Solutions</h3>
+                    <div class="card-logo" style="justify-content:center;"><div class="card-logo-icon" style="background:linear-gradient(135deg,#8b5cf6,#06b6d4);"><i class="fas fa-brain"></i></div><div class="card-logo-text"><h4 style="color:#1a1a2e;">Addis Power</h4><p style="color:#f59e0b;">Web · AI · Support</p></div></div>
+                    <h3 style="margin:20px 0; color:#1a1a2e;">Complete Tech Solutions for Startups</h3>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin:20px 0;">
-                        <span style="background:rgba(139,92,246,0.2); padding:5px 12px; border-radius:20px;">🌐 Websites</span>
-                        <span style="background:rgba(139,92,246,0.2); padding:5px 12px; border-radius:20px;">📇 Business Cards</span>
-                        <span style="background:rgba(139,92,246,0.2); padding:5px 12px; border-radius:20px;">📊 Brochures</span>
-                        <span style="background:rgba(139,92,246,0.2); padding:5px 12px; border-radius:20px;">🛠️ Tech Support</span>
+                        <span class="service-tag" style="background:#f0f0f5; color:#1a1a2e;">🌐 Websites</span>
+                        <span class="service-tag" style="background:#f0f0f5; color:#1a1a2e;">📇 Business Cards</span>
+                        <span class="service-tag" style="background:#f0f0f5; color:#1a1a2e;">📊 Brochures</span>
+                        <span class="service-tag" style="background:#f0f0f5; color:#1a1a2e;">🛠️ Tech Support</span>
+                        <span class="service-tag" style="background:#f0f0f5; color:#1a1a2e;">🤖 AI Integration</span>
                     </div>
-                    <div style="background:rgba(255,255,255,0.05); border-radius:12px; padding:15px;">
+                    <div class="price-box" style="background:#f0f0f5; border-radius:12px; padding:15px; margin:20px 0;">
                         <p style="color:#f59e0b; font-weight:600;">🔥 Startup Pricing</p>
-                        <p><strong>Starter:</strong> 7,000 ETB (5-page website + business card)</p>
-                        <p><strong>Professional:</strong> 15,000 ETB (10-page + AI chatbot + business cards + brochure)</p>
-                        <p><strong>Enterprise:</strong> Custom quote</p>
+                        <p style="color:#1a1a2e;"><strong>Starter:</strong> 7,000 ETB (5-page website + business card)</p>
+                        <p style="color:#1a1a2e;"><strong>Professional:</strong> 15,000 ETB (10-page + AI chatbot + business cards + brochure)</p>
+                        <p style="color:#1a1a2e;"><strong>Enterprise:</strong> Custom quote</p>
                     </div>
-                    <div style="margin-top:20px;">
-                        <p><i class="fab fa-telegram"></i> @powr_addis | <i class="fab fa-whatsapp"></i> +251 911 573 334</p>
-                        <p><i class="fas fa-envelope"></i> agoodperception@gmail.com</p>
+                    <div style="margin-top:20px; color:#1a1a2e;">
+                        <p><i class="fab fa-telegram"></i> @addis_power | <i class="fab fa-whatsapp"></i> +251 911 573 334</p>
+                        <p><i class="fas fa-envelope"></i> addispower@proton.me</p>
                         <p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p>
                     </div>
                 </div>
             </div>
             <button class="download-pdf-btn" onclick="downloadBrochure()"><i class="fas fa-file-pdf"></i> Download Brochure (PDF)</button>
-            <p style="color:#71717a; font-size:12px; margin-top:12px;">📄 Complete company profile | Services & pricing included</p>
+            <p style="color:#71717a; font-size:12px; margin-top:12px;">📄 Complete company profile | Services & pricing included | White background for printing</p>
         </div>
     </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section"><div class="contact-card"><h2>Ready to <span class="gradient-text">Transform</span> Your Vision?</h2><div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap; margin:30px 0;"><a href="https://wa.me/251911573334" class="btn btn-primary"><i class="fab fa-whatsapp"></i> WhatsApp</a><a href="https://t.me/powr_addis" class="btn btn-outline"><i class="fab fa-telegram"></i> Telegram</a></div><div class="social-links"><a href="https://t.me/powr_addis" class="social-link"><i class="fab fa-telegram"></i></a><a href="https://wa.me/251911573334" class="social-link"><i class="fab fa-whatsapp"></i></a><a href="mailto:agoodperception@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a></div><p><i class="fas fa-phone-alt"></i> +251 911 573 334 &nbsp;|&nbsp;<i class="fab fa-telegram"></i> @powr_addis &nbsp;|&nbsp;<i class="fas fa-envelope"></i> agoodperception@gmail.com</p></div></section>
+    <!-- Contact -->
+    <section id="contact" class="contact-section"><div class="contact-card"><h2>Ready to <span class="gradient-text">Transform</span> Your Vision?</h2><div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap; margin:30px 0;"><a href="https://wa.me/251911573334" class="btn btn-primary"><i class="fab fa-whatsapp"></i> WhatsApp</a><a href="https://t.me/addis_power" class="btn btn-outline"><i class="fab fa-telegram"></i> Telegram</a></div><div class="social-links"><a href="https://t.me/addis_power" class="social-link"><i class="fab fa-telegram"></i></a><a href="https://wa.me/251911573334" class="social-link"><i class="fab fa-whatsapp"></i></a><a href="mailto:addispower@proton.me" class="social-link"><i class="fas fa-envelope"></i></a></div><p><i class="fas fa-phone-alt"></i> +251 911 573 334 &nbsp;|&nbsp;<i class="fab fa-telegram"></i> @addis_power &nbsp;|&nbsp;<i class="fas fa-envelope"></i> addispower@proton.me</p></div></section>
 
-    <footer><div class="footer-content"><div class="footer-logo"><h3>Addis Power</h3><p>Web · Design · Tech Support</p></div><div class="footer-links"><h4>Quick Links</h4><a href="#home">Home</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></div><div class="footer-links"><h4>Contact</h4><a href="https://wa.me/251911573334">WhatsApp</a><a href="https://t.me/powr_addis">Telegram</a><a href="mailto:agoodperception@gmail.com">Email</a></div></div><div class="footer-bottom"><p>© 2026 Addis Power. Built with ❤️ in Ethiopia</p></div></footer>
+    <footer><div class="footer-content"><div class="footer-logo"><h3>Addis Power</h3><p>Web · Design · Tech Support</p></div><div class="footer-links"><h4>Quick Links</h4><a href="#home">Home</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></div><div class="footer-links"><h4>Contact</h4><a href="https://wa.me/251911573334">WhatsApp</a><a href="https://t.me/addis_power">Telegram</a><a href="mailto:addispower@proton.me">Email</a></div></div><div class="footer-bottom"><p>© 2026 Addis Power. Built with ❤️ in Ethiopia</p></div></footer>
 </div>
 
-<!-- Gift Modal (Visitor gets their own card with "Powered by Addis Power") -->
-<div id="giftModal" class="modal">
-    <div class="modal-content">
-        <div class="modal-close" onclick="closeGiftModal()"><i class="fas fa-times"></i></div>
-        <div class="modal-header"><i class="fas fa-gift"></i><h2>🎁 Free Business Card</h2><p>Fill the form – your card will include <strong style="color:#f59e0b;">"Powered by Addis Power"</strong></p></div>
-        <form id="giftForm" onsubmit="generateVisitorCard(event)">
-            <div class="form-group"><input type="text" id="fullName" placeholder="Full Name" required></div>
-            <div class="form-group"><input type="email" id="email" placeholder="Email Address" required></div>
-            <div class="form-group"><input type="tel" id="phone" placeholder="Phone Number" required></div>
-            <div class="form-group"><input type="text" id="jobTitle" placeholder="Job Title / Position" required></div>
-            <button type="submit" class="modal-submit"><i class="fas fa-download"></i> Generate & Download My Card</button>
-        </form>
-    </div>
-</div>
+<!-- Gift Modal -->
+<div id="giftModal" class="modal"><div class="modal-content"><div class="modal-close" onclick="closeGiftModal()"><i class="fas fa-times"></i></div><div class="modal-header"><i class="fas fa-gift"></i><h2>🎁 Free Business Card</h2><p>Your card will include <strong style="color:#f59e0b;">"Powered by Addis Power"</strong></p></div><form id="giftForm" onsubmit="generateVisitorCard(event)"><div class="form-group"><input type="text" id="fullName" placeholder="Full Name" required></div><div class="form-group"><input type="email" id="email" placeholder="Email Address" required></div><div class="form-group"><input type="tel" id="phone" placeholder="Phone Number" required></div><div class="form-group"><input type="text" id="jobTitle" placeholder="Job Title / Position" required></div><button type="submit" class="modal-submit"><i class="fas fa-download"></i> Generate & Download My Card</button></form></div></div>
 
 <!-- Floating Gift Button -->
 <div class="floating-gift" onclick="openGiftModal()"><i class="fas fa-gift"></i> <span>Free Business Card!</span></div>
 
 <!-- Chatbot & Floating Buttons -->
-<div class="chatbot-container"><div class="chatbot-toggle" onclick="toggleChatbot()"><i class="fas fa-robot"></i></div><div class="chatbot-window" id="chatbotWindow"><div class="chatbot-header"><div class="chatbot-avatar"><i class="fas fa-brain"></i></div><div><h3>Addis Power AI</h3></div><div class="chatbot-close" onclick="toggleChatbot()"><i class="fas fa-times"></i></div></div><div class="chatbot-messages" id="chatMessages"><div class="message bot"><div class="message-content">Selam! 🇪🇹 Need a free business card? Click the gift button! Prices start at 7,000 ETB for websites.</div></div></div><div class="quick-replies"><span class="quick-reply" onclick="sendQuickReply('Free business card')">🎁 Free Card</span><span class="quick-reply" onclick="sendQuickReply('Pricing')">💰 Pricing</span></div><div class="chatbot-input"><input type="text" id="chatInput" placeholder="Type..." onkeypress="handleKeyPress(event)"><button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button></div></div></div>
+<div class="chatbot-container"><div class="chatbot-toggle" onclick="toggleChatbot()"><i class="fas fa-robot"></i></div><div class="chatbot-window" id="chatbotWindow"><div class="chatbot-header"><div class="chatbot-avatar"><i class="fas fa-brain"></i></div><div><h3>Addis Power AI</h3></div><div class="chatbot-close" onclick="toggleChatbot()"><i class="fas fa-times"></i></div></div><div class="chatbot-messages" id="chatMessages"><div class="message bot"><div class="message-content">Selam! 🇪🇹 Need a free business card? Click the gift button! Websites start at 7,000 ETB.</div></div></div><div class="quick-replies"><span class="quick-reply" onclick="sendQuickReply('Free business card')">🎁 Free Card</span><span class="quick-reply" onclick="sendQuickReply('Pricing')">💰 Pricing</span><span class="quick-reply" onclick="sendQuickReply('Contact')">📞 Contact</span></div><div class="chatbot-input"><input type="text" id="chatInput" placeholder="Type..." onkeypress="handleKeyPress(event)"><button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button></div></div></div>
+
 <a href="https://wa.me/251911573334" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
-<a href="https://t.me/powr_addis" class="telegram-float" target="_blank"><i class="fab fa-telegram"></i></a>
+<a href="https://t.me/addis_power" class="telegram-float" target="_blank"><i class="fab fa-telegram"></i></a>
 
 <script>
-    // Mobile menu
     function toggleMobileMenu() { document.getElementById('mainNav').classList.toggle('show'); }
-    // Modal
     function openGiftModal() { document.getElementById('giftModal').classList.add('active'); }
     function closeGiftModal() { document.getElementById('giftModal').classList.remove('active'); }
     window.onclick = function(e) { if (e.target === document.getElementById('giftModal')) closeGiftModal(); }
 
-    // Visitor's gift card (their own info + Powered by Addis Power)
+    // Visitor's gift card
     function generateVisitorCard(e) {
         e.preventDefault();
         const name = document.getElementById('fullName').value;
@@ -357,35 +345,35 @@
         a.download = `Business_Card_${name.replace(/\s/g,'_')}.html`;
         document.body.appendChild(a); a.click(); document.body.removeChild(a);
         URL.revokeObjectURL(blob);
-        alert(`✅ Your business card has been downloaded! Open the HTML file in any browser to view and print.\n\n"Powered by Addis Power" appears at the bottom.`);
+        alert(`✅ Your business card is ready! Open the downloaded HTML file in any browser to view and print.\n\n"Powered by Addis Power" appears at the bottom.`);
         closeGiftModal(); document.getElementById('giftForm').reset();
     }
 
-    // Founder's card PDF download
+    // Founder's card
     function downloadFounderCard() {
-        const founderHtml = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Addis Abebayehu - Business Card</title><style>body{background:#0d0d1a;display:flex;justify-content:center;align-items:center;min-height:100vh;font-family:'Space Grotesk',sans-serif;}.card{width:350px;background:linear-gradient(135deg,#0f0f1c,#1a1a2e);border-radius:20px;padding:25px;border:1px solid rgba(139,92,246,0.4);}.logo{display:flex;align-items:center;gap:10px;margin-bottom:20px;}.logo-icon{width:40px;height:40px;background:linear-gradient(135deg,#8b5cf6,#06b6d4);border-radius:10px;display:flex;align-items:center;justify-content:center;}.logo-icon i{font-size:20px;color:white;}.logo-text h4{color:white;font-size:18px;}.logo-text p{color:#f59e0b;font-size:8px;}.card-name{font-size:22px;font-weight:bold;color:white;margin:15px 0 5px;}.card-title{color:#f59e0b;font-size:12px;margin-bottom:15px;}.card-contact{font-size:11px;color:#a1a1aa;margin:8px 0;display:flex;align-items:center;gap:8px;}</style></head><body><div class="card"><div class="logo"><div class="logo-icon"><i>🧠</i></div><div class="logo-text"><h4>Addis Power</h4><p>Web · AI · Support</p></div></div><div class="card-name">Addis Abebayehu</div><div class="card-title">Founder & Lead Developer</div><div class="card-contact"><span>📞</span> +251 911 573 334</div><div class="card-contact"><span>✈️</span> @powr_addis</div><div class="card-contact"><span>✉️</span> agoodperception@gmail.com</div><div class="card-contact"><span>🌐</span> addispower.com</div></div></body></html>`;
+        const founderHtml = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Addis Abebayehu - Business Card</title><style>body{background:#0d0d1a;display:flex;justify-content:center;align-items:center;min-height:100vh;font-family:'Space Grotesk',sans-serif;}.card{width:350px;background:linear-gradient(135deg,#0f0f1c,#1a1a2e);border-radius:20px;padding:25px;border:1px solid rgba(139,92,246,0.4);}.logo{display:flex;align-items:center;gap:10px;margin-bottom:20px;}.logo-icon{width:40px;height:40px;background:linear-gradient(135deg,#8b5cf6,#06b6d4);border-radius:10px;display:flex;align-items:center;justify-content:center;}.logo-icon i{font-size:20px;color:white;}.logo-text h4{color:white;font-size:18px;}.logo-text p{color:#f59e0b;font-size:8px;}.card-name{font-size:22px;font-weight:bold;color:white;margin:15px 0 5px;}.card-title{color:#f59e0b;font-size:12px;margin-bottom:15px;}.card-contact{font-size:11px;color:#a1a1aa;margin:8px 0;display:flex;align-items:center;gap:8px;}</style></head><body><div class="card"><div class="logo"><div class="logo-icon"><i>🧠</i></div><div class="logo-text"><h4>Addis Power</h4><p>Web · AI · Support</p></div></div><div class="card-name">Addis Abebayehu</div><div class="card-title">Founder & Lead Developer</div><div class="card-contact"><span>📞</span> +251 911 573 334</div><div class="card-contact"><span>✈️</span> @addis_power</div><div class="card-contact"><span>✉️</span> addispower@proton.me</div><div class="card-contact"><span>🌐</span> addispower.com</div></div></body></html>`;
         const blob = new Blob([founderHtml], {type: 'text/html'});
         const a = document.createElement('a');
         a.href = URL.createObjectURL(blob);
         a.download = 'Addis_Power_Founder_Business_Card.html';
         a.click();
         URL.revokeObjectURL(blob);
-        alert("✅ Founder's business card downloaded. Open the HTML file to view/print.");
+        alert("✅ Founder's business card downloaded.");
     }
 
-    // Brochure PDF download
+    // Brochure with WHITE BACKGROUND
     function downloadBrochure() {
-        const brochureHtml = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Addis Power - Company Brochure</title><style>body{background:#0d0d1a;display:flex;justify-content:center;align-items:center;min-height:100vh;font-family:'Space Grotesk',sans-serif;}.brochure{max-width:800px;background:linear-gradient(135deg,#0f0f1c,#1a1a2e);border-radius:30px;padding:40px;border:1px solid rgba(139,92,246,0.4);margin:20px;}.logo{display:flex;align-items:center;gap:10px;justify-content:center;margin-bottom:30px;}.logo-icon{width:50px;height:50px;background:linear-gradient(135deg,#8b5cf6,#06b6d4);border-radius:12px;display:flex;align-items:center;justify-content:center;}.logo-icon i{font-size:28px;color:white;}.logo-text h2{color:white;font-size:28px;}.logo-text p{color:#f59e0b;}.service-tag{display:inline-block;background:rgba(139,92,246,0.2);padding:8px 18px;border-radius:40px;margin:5px;}.price-box{background:rgba(255,255,255,0.05);border-radius:20px;padding:20px;margin:20px 0;}.contact-line{margin:10px 0;}</style></head><body><div class="brochure"><div class="logo"><div class="logo-icon"><i>🧠</i></div><div class="logo-text"><h2>Addis Power</h2><p>Web · AI · Support</p></div></div><h1 style="text-align:center; margin-bottom:20px;">Complete Tech Solutions for Startups</h1><div style="text-align:center;"><span class="service-tag">🌐 Websites</span><span class="service-tag">📇 Business Cards</span><span class="service-tag">📊 Brochures</span><span class="service-tag">🛠️ Tech Support</span><span class="service-tag">🤖 AI Integration</span></div><div class="price-box"><h3 style="color:#f59e0b;">🔥 Startup Pricing</h3><p><strong>Starter:</strong> 7,000 ETB (5-page website + business card)</p><p><strong>Professional:</strong> 15,000 ETB (10-page + AI chatbot + business cards + brochure)</p><p><strong>Enterprise:</strong> Custom quote</p></div><div style="margin-top:30px;"><h3>Contact Us</h3><p class="contact-line"><i class="fab fa-telegram"></i> @powr_addis</p><p class="contact-line"><i class="fab fa-whatsapp"></i> +251 911 573 334</p><p class="contact-line"><i class="fas fa-envelope"></i> agoodperception@gmail.com</p><p class="contact-line"><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p></div><div style="text-align:center; margin-top:30px; font-size:12px; color:#71717a;">© 2026 Addis Power — Empowering Ethiopian startups</div></div></body></html>`;
+        const brochureHtml = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Addis Power - Company Brochure</title><style>body{background:#ffffff;display:flex;justify-content:center;align-items:center;min-height:100vh;font-family:'Space Grotesk',sans-serif;margin:0;padding:20px;}.brochure{max-width:800px;background:#ffffff;border-radius:30px;padding:40px;border:1px solid #e0e0e0;margin:20px;box-shadow:0 10px 30px rgba(0,0,0,0.1);}.logo{display:flex;align-items:center;gap:10px;justify-content:center;margin-bottom:30px;}.logo-icon{width:50px;height:50px;background:linear-gradient(135deg,#8b5cf6,#06b6d4);border-radius:12px;display:flex;align-items:center;justify-content:center;}.logo-icon i{font-size:28px;color:white;}.logo-text h2{color:#1a1a2e;font-size:28px;margin:0;}.logo-text p{color:#f59e0b;margin:0;}.service-tag{display:inline-block;background:#f0f0f5;color:#1a1a2e;padding:8px 18px;border-radius:40px;margin:5px;font-size:14px;}.price-box{background:#f0f0f5;border-radius:20px;padding:20px;margin:20px 0;color:#1a1a2e;}.contact-line{margin:10px 0;color:#1a1a2e;}.contact-line i{color:#f59e0b;width:25px;}.header-text{color:#1a1a2e;text-align:center;margin-bottom:20px;}</style></head><body><div class="brochure"><div class="logo"><div class="logo-icon"><i>🧠</i></div><div class="logo-text"><h2>Addis Power</h2><p>Web · AI · Support</p></div></div><h1 style="text-align:center; color:#1a1a2e; margin-bottom:20px;">Complete Tech Solutions for Startups</h1><div style="text-align:center;"><span class="service-tag">🌐 Websites</span><span class="service-tag">📇 Business Cards</span><span class="service-tag">📊 Brochures</span><span class="service-tag">🛠️ Tech Support</span><span class="service-tag">🤖 AI Integration</span></div><div class="price-box"><h3 style="color:#f59e0b;">🔥 Startup Pricing</h3><p><strong>Starter:</strong> 7,000 ETB (5-page website + business card)</p><p><strong>Professional:</strong> 15,000 ETB (10-page + AI chatbot + business cards + brochure)</p><p><strong>Enterprise:</strong> Custom quote</p></div><div style="margin-top:30px;"><h3 style="color:#1a1a2e;">Contact Us</h3><p class="contact-line"><i class="fab fa-telegram"></i> @addis_power</p><p class="contact-line"><i class="fab fa-whatsapp"></i> +251 911 573 334</p><p class="contact-line"><i class="fas fa-envelope"></i> addispower@proton.me</p><p class="contact-line"><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p></div><div style="text-align:center; margin-top:30px; font-size:12px; color:#71717a;">© 2026 Addis Power — Empowering Ethiopian startups</div></div></body></html>`;
         const blob = new Blob([brochureHtml], {type: 'text/html'});
         const a = document.createElement('a');
         a.href = URL.createObjectURL(blob);
         a.download = 'Addis_Power_Company_Brochure.html';
         a.click();
         URL.revokeObjectURL(blob);
-        alert("✅ Company brochure downloaded. Open the HTML file to view/print.");
+        alert("✅ Company brochure downloaded with white background for easy printing!");
     }
 
-    // Chatbot functions (minimal)
+    // Chatbot
     function toggleChatbot() { document.getElementById('chatbotWindow').classList.toggle('active'); }
     function handleKeyPress(e) { if (e.key === 'Enter') sendMessage(); }
     function sendQuickReply(text) { document.getElementById('chatInput').value = text; sendMessage(); }
@@ -397,16 +385,18 @@
         input.value = '';
         setTimeout(() => {
             let response = '';
-            if (msg.toLowerCase().includes('free')) response = "🎁 Click the floating 'Free Business Card!' button! Fill the form and get your custom card instantly.";
-            else if (msg.toLowerCase().includes('price')) response = "Starter: 7,000 ETB, Professional: 15,000 ETB. Check our Pricing section!";
-            else response = "Selam! 🇪🇹 Need a free business card or website? Click the gift button or contact us on Telegram!";
+            const l = msg.toLowerCase();
+            if (l.includes('free') || l.includes('card')) response = "🎁 Click the floating 'Free Business Card!' button! Fill the form and get your custom card instantly, with 'Powered by Addis Power' at the bottom.";
+            else if (l.includes('price') || l.includes('pricing')) response = "Starter: 7,000 ETB (5-page website + business card), Professional: 15,000 ETB (10-page + AI chatbot + business cards + brochure). Enterprise custom.";
+            else if (l.includes('contact')) response = "Contact: 📞 +251 911 573 334 | 📱 Telegram: @addis_power | ✉️ addispower@proton.me";
+            else response = "Selam! 🇪🇹 Need a free business card, website, or tech support? Check our pricing section or click the gift button!";
             addMessage(response, 'bot');
         }, 500);
     }
     function addMessage(text, sender) {
         const div = document.createElement('div');
         div.className = `message ${sender}`;
-        div.innerHTML = `<div class="message-avatar"><i class="fas ${sender === 'bot' ? 'fa-brain' : 'fa-user'}"></i></div><div class="message-content">${text}</div>`;
+        div.innerHTML = `<div class="message-content">${text}</div>`;
         document.getElementById('chatMessages').appendChild(div);
         document.getElementById('chatMessages').scrollTop = document.getElementById('chatMessages').scrollHeight;
     }
