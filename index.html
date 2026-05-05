@@ -72,7 +72,7 @@
         .section-title { text-align: center; margin-bottom: 60px; }
         .section-title h2 { font-size: clamp(32px,5vw,48px); font-weight: 700; margin-bottom: 16px; }
 
-        /* Services, Portfolio, About, Testimonials, Pricing, Tech Support */
+        /* Services, Portfolio, Pricing etc (compact) */
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 30px; padding: 40px 0; }
         .service-card { background: rgba(20,20,40,0.5); backdrop-filter: blur(15px); border-radius: 24px; padding: 36px 28px; text-align: center; transition: 0.3s; border: 1px solid rgba(255,255,255,0.08); }
         .service-card:hover { transform: translateY(-10px); border-color: rgba(139,92,246,0.3); }
@@ -130,31 +130,6 @@
         .card-contact { font-size: 11px; color: #a1a1aa; margin: 8px 0; display: flex; align-items: center; gap: 8px; }
         .download-pdf-btn { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg,#f59e0b,#8b5cf6); padding: 14px 28px; border-radius: 40px; font-weight: 600; margin-top: 20px; transition: 0.3s; cursor: pointer; border: none; color: #fff; font-size: 16px; width: 100%; justify-content: center; }
         .download-pdf-btn:hover { transform: translateY(-2px); gap: 15px; }
-
-        /* Brochure White Background (Fixed) */
-        .brochure-white {
-            background: #ffffff !important;
-            color: #1a1a2e !important;
-        }
-        .brochure-white .card-logo-text h4,
-        .brochure-white .card-name,
-        .brochure-white h3,
-        .brochure-white p,
-        .brochure-white .card-contact {
-            color: #1a1a2e !important;
-        }
-        .brochure-white .card-logo-text p,
-        .brochure-white .card-title {
-            color: #f59e0b !important;
-        }
-        .brochure-white .price-box {
-            background: #f0f0f5 !important;
-            color: #1a1a2e !important;
-        }
-        .brochure-white .service-tag {
-            background: rgba(139,92,246,0.15) !important;
-            color: #1a1a2e !important;
-        }
 
         /* Modal */
         .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); backdrop-filter: blur(10px); z-index: 2000; align-items: center; justify-content: center; }
@@ -254,7 +229,7 @@
     <!-- Tech Support -->
     <div class="tech-support"><h2 style="font-size:32px;">💻 <span class="gradient-text">Technical Support</span> Plans</h2><div class="support-plans"><div class="support-plan"><i class="fas fa-clock"></i><h3>Basic</h3><ul><li>Weekly backups</li><li>Security monitoring</li></ul></div><div class="support-plan"><i class="fas fa-crown"></i><h3>Professional</h3><ul><li>Daily backups</li><li>Priority support</li><li>Content updates</li></ul></div><div class="support-plan"><i class="fas fa-infinity"></i><h3>Enterprise</h3><ul><li>24/7 dedicated</li><li>Real-time monitoring</li><li>Instant response</li></ul></div></div></div>
 
-    <!-- PREMIUM DOWNLOADS: Founder Card + Brochure (Brochure now has WHITE BACKGROUND) -->
+    <!-- Premium Downloads -->
     <div class="premium-downloads">
         <!-- Founder's Business Card -->
         <div class="premium-card founder-card">
@@ -270,39 +245,22 @@
                     <div class="card-contact"><i class="fas fa-globe"></i> addispower.com</div>
                 </div>
             </div>
-            <button class="download-pdf-btn" onclick="downloadFounderCard()"><i class="fas fa-file-pdf"></i> Download Founder's Business Card (PDF)</button>
-            <p style="color:#71717a; font-size:12px; margin-top:12px;">📄 Print-ready PDF | Professional design</p>
+            <button class="download-pdf-btn" onclick="downloadFounderCard()"><i class="fas fa-file-pdf"></i> Download Founder's Business Card</button>
         </div>
 
-        <!-- Company Brochure - WHITE BACKGROUND with dark text -->
+        <!-- Company Brochure -->
         <div class="premium-card brochure-card">
             <div class="premium-title"><i class="fas fa-brochure"></i><h3>Company Brochure</h3></div>
-            <div class="preview-box brochure-white" style="background: #ffffff !important;">
-                <div style="text-align:center;">
-                    <div class="card-logo" style="justify-content:center;"><div class="card-logo-icon" style="background:linear-gradient(135deg,#8b5cf6,#06b6d4);"><i class="fas fa-brain"></i></div><div class="card-logo-text"><h4 style="color:#1a1a2e;">Addis Power</h4><p style="color:#f59e0b;">Web · AI · Support</p></div></div>
-                    <h3 style="margin:20px 0; color:#1a1a2e;">Complete Tech Solutions for Startups</h3>
-                    <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin:20px 0;">
-                        <span class="service-tag" style="background:#f0f0f5; color:#1a1a2e;">🌐 Websites</span>
-                        <span class="service-tag" style="background:#f0f0f5; color:#1a1a2e;">📇 Business Cards</span>
-                        <span class="service-tag" style="background:#f0f0f5; color:#1a1a2e;">📊 Brochures</span>
-                        <span class="service-tag" style="background:#f0f0f5; color:#1a1a2e;">🛠️ Tech Support</span>
-                        <span class="service-tag" style="background:#f0f0f5; color:#1a1a2e;">🤖 AI Integration</span>
-                    </div>
-                    <div class="price-box" style="background:#f0f0f5; border-radius:12px; padding:15px; margin:20px 0;">
-                        <p style="color:#f59e0b; font-weight:600;">🔥 Startup Pricing</p>
-                        <p style="color:#1a1a2e;"><strong>Starter:</strong> 7,000 ETB (5-page website + business card)</p>
-                        <p style="color:#1a1a2e;"><strong>Professional:</strong> 15,000 ETB (10-page + AI chatbot + business cards + brochure)</p>
-                        <p style="color:#1a1a2e;"><strong>Enterprise:</strong> Custom quote</p>
-                    </div>
-                    <div style="margin-top:20px; color:#1a1a2e;">
-                        <p><i class="fab fa-telegram"></i> @addis_power | <i class="fab fa-whatsapp"></i> +251 911 573 334</p>
-                        <p><i class="fas fa-envelope"></i> addispower@proton.me</p>
-                        <p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p>
-                    </div>
+            <div class="preview-box">
+                <div style="text-align:center; background:#fff; padding:20px; border-radius:16px;">
+                    <div style="display:flex; justify-content:center; gap:10px; margin-bottom:20px;"><div style="width:40px;height:40px;background:linear-gradient(135deg,#8b5cf6,#06b6d4);border-radius:10px;display:flex;align-items:center;justify-content:center;"><i class="fas fa-brain" style="color:#fff;"></i></div><div><h4 style="color:#1a1a2e;">Addis Power</h4><p style="color:#f59e0b;">Web · AI · Support</p></div></div>
+                    <h3 style="color:#1a1a2e;">Complete Tech Solutions for Startups</h3>
+                    <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:20px 0;"><span style="background:#f0f0f5;padding:5px 12px;border-radius:20px;">🌐 Websites</span><span style="background:#f0f0f5;padding:5px 12px;border-radius:20px;">📇 Business Cards</span><span style="background:#f0f0f5;padding:5px 12px;border-radius:20px;">📊 Brochures</span><span style="background:#f0f0f5;padding:5px 12px;border-radius:20px;">🛠️ Tech Support</span></div>
+                    <div style="background:#f0f0f5;border-radius:12px;padding:15px;margin:20px 0;"><p style="color:#f59e0b;font-weight:600;">🔥 Startup Pricing</p><p style="color:#1a1a2e;"><strong>Starter:</strong> 7,000 ETB</p><p style="color:#1a1a2e;"><strong>Professional:</strong> 15,000 ETB</p><p style="color:#1a1a2e;"><strong>Enterprise:</strong> Custom</p></div>
+                    <div style="color:#1a1a2e;"><p><i class="fab fa-telegram"></i> @addis_power | <i class="fab fa-whatsapp"></i> +251 911 573 334</p><p><i class="fas fa-envelope"></i> addispower@proton.me</p></div>
                 </div>
             </div>
-            <button class="download-pdf-btn" onclick="downloadBrochure()"><i class="fas fa-file-pdf"></i> Download Brochure (PDF)</button>
-            <p style="color:#71717a; font-size:12px; margin-top:12px;">📄 Complete company profile | Services & pricing included | White background for printing</p>
+            <button class="download-pdf-btn" onclick="downloadBrochure()"><i class="fas fa-file-pdf"></i> Download Brochure</button>
         </div>
     </div>
 
@@ -312,14 +270,14 @@
     <footer><div class="footer-content"><div class="footer-logo"><h3>Addis Power</h3><p>Web · Design · Tech Support</p></div><div class="footer-links"><h4>Quick Links</h4><a href="#home">Home</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></div><div class="footer-links"><h4>Contact</h4><a href="https://wa.me/251911573334">WhatsApp</a><a href="https://t.me/addis_power">Telegram</a><a href="mailto:addispower@proton.me">Email</a></div></div><div class="footer-bottom"><p>© 2026 Addis Power. Built with ❤️ in Ethiopia</p></div></footer>
 </div>
 
-<!-- Gift Modal -->
-<div id="giftModal" class="modal"><div class="modal-content"><div class="modal-close" onclick="closeGiftModal()"><i class="fas fa-times"></i></div><div class="modal-header"><i class="fas fa-gift"></i><h2>🎁 Free Business Card</h2><p>Your card will include <strong style="color:#f59e0b;">"Powered by Addis Power"</strong></p></div><form id="giftForm" onsubmit="generateVisitorCard(event)"><div class="form-group"><input type="text" id="fullName" placeholder="Full Name" required></div><div class="form-group"><input type="email" id="email" placeholder="Email Address" required></div><div class="form-group"><input type="tel" id="phone" placeholder="Phone Number" required></div><div class="form-group"><input type="text" id="jobTitle" placeholder="Job Title / Position" required></div><button type="submit" class="modal-submit"><i class="fas fa-download"></i> Generate & Download My Card</button></form></div></div>
+<!-- Gift Modal - NO LOGO, just decorative lines -->
+<div id="giftModal" class="modal"><div class="modal-content"><div class="modal-close" onclick="closeGiftModal()"><i class="fas fa-times"></i></div><div class="modal-header"><i class="fas fa-gift"></i><h2>🎁 Free Business Card</h2><p>Your professional business card – no logo, just you</p></div><form id="giftForm" onsubmit="generateVisitorCard(event)"><div class="form-group"><input type="text" id="fullName" placeholder="Full Name" required></div><div class="form-group"><input type="email" id="email" placeholder="Email Address" required></div><div class="form-group"><input type="tel" id="phone" placeholder="Phone Number" required></div><div class="form-group"><input type="text" id="jobTitle" placeholder="Job Title / Position" required></div><button type="submit" class="modal-submit"><i class="fas fa-download"></i> Generate & Download My Card</button></form></div></div>
 
 <!-- Floating Gift Button -->
 <div class="floating-gift" onclick="openGiftModal()"><i class="fas fa-gift"></i> <span>Free Business Card!</span></div>
 
-<!-- Chatbot & Floating Buttons -->
-<div class="chatbot-container"><div class="chatbot-toggle" onclick="toggleChatbot()"><i class="fas fa-robot"></i></div><div class="chatbot-window" id="chatbotWindow"><div class="chatbot-header"><div class="chatbot-avatar"><i class="fas fa-brain"></i></div><div><h3>Addis Power AI</h3></div><div class="chatbot-close" onclick="toggleChatbot()"><i class="fas fa-times"></i></div></div><div class="chatbot-messages" id="chatMessages"><div class="message bot"><div class="message-content">Selam! 🇪🇹 Need a free business card? Click the gift button! Websites start at 7,000 ETB.</div></div></div><div class="quick-replies"><span class="quick-reply" onclick="sendQuickReply('Free business card')">🎁 Free Card</span><span class="quick-reply" onclick="sendQuickReply('Pricing')">💰 Pricing</span><span class="quick-reply" onclick="sendQuickReply('Contact')">📞 Contact</span></div><div class="chatbot-input"><input type="text" id="chatInput" placeholder="Type..." onkeypress="handleKeyPress(event)"><button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button></div></div></div>
+<!-- Chatbot -->
+<div class="chatbot-container"><div class="chatbot-toggle" onclick="toggleChatbot()"><i class="fas fa-robot"></i></div><div class="chatbot-window" id="chatbotWindow"><div class="chatbot-header"><div class="chatbot-avatar"><i class="fas fa-brain"></i></div><div><h3>Addis Power AI</h3></div><div class="chatbot-close" onclick="toggleChatbot()"><i class="fas fa-times"></i></div></div><div class="chatbot-messages" id="chatMessages"><div class="message bot"><div class="message-content">Selam! 🇪🇹 Need a free business card? Click the gift button! Websites start at 7,000 ETB.</div></div></div><div class="quick-replies"><span class="quick-reply" onclick="sendQuickReply('Free business card')">🎁 Free Card</span><span class="quick-reply" onclick="sendQuickReply('Pricing')">💰 Pricing</span></div><div class="chatbot-input"><input type="text" id="chatInput" placeholder="Type..." onkeypress="handleKeyPress(event)"><button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button></div></div></div>
 
 <a href="https://wa.me/251911573334" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 <a href="https://t.me/addis_power" class="telegram-float" target="_blank"><i class="fab fa-telegram"></i></a>
@@ -330,7 +288,7 @@
     function closeGiftModal() { document.getElementById('giftModal').classList.remove('active'); }
     window.onclick = function(e) { if (e.target === document.getElementById('giftModal')) closeGiftModal(); }
 
-    // Visitor's gift card
+    // Visitor's gift card - NO LOGO, just decorative lines + their info + small credit
     function generateVisitorCard(e) {
         e.preventDefault();
         const name = document.getElementById('fullName').value;
@@ -338,18 +296,36 @@
         const phone = document.getElementById('phone').value;
         const title = document.getElementById('jobTitle').value;
         if (!name || !email || !phone || !title) { alert("Please fill all fields"); return; }
-        const cardHtml = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Business Card - ${name}</title><style>body{background:#0d0d1a;display:flex;justify-content:center;align-items:center;min-height:100vh;font-family:'Space Grotesk',sans-serif;}.card{width:350px;background:linear-gradient(135deg,#0f0f1c,#1a1a2e);border-radius:20px;padding:25px;border:1px solid rgba(139,92,246,0.4);}.logo{display:flex;align-items:center;gap:10px;margin-bottom:20px;}.logo-icon{width:40px;height:40px;background:linear-gradient(135deg,#8b5cf6,#06b6d4);border-radius:10px;display:flex;align-items:center;justify-content:center;}.logo-icon i{font-size:20px;color:white;}.logo-text h4{color:white;font-size:18px;}.logo-text p{color:#f59e0b;font-size:8px;}.card-name{font-size:22px;font-weight:bold;color:white;margin:15px 0 5px;}.card-title{color:#f59e0b;font-size:12px;margin-bottom:15px;}.card-contact{font-size:11px;color:#a1a1aa;margin:8px 0;display:flex;align-items:center;gap:8px;}.powered-by{margin-top:20px;padding-top:15px;border-top:1px solid rgba(139,92,246,0.3);text-align:center;font-size:9px;color:#71717a;}.powered-by span{color:#f59e0b;font-weight:bold;}</style></head><body><div class="card"><div class="logo"><div class="logo-icon"><i>🧠</i></div><div class="logo-text"><h4>Addis Power</h4><p>Web · AI · Support</p></div></div><div class="card-name">${name}</div><div class="card-title">${title}</div><div class="card-contact"><span>📞</span> ${phone}</div><div class="card-contact"><span>✉️</span> ${email}</div><div class="card-contact"><span>🌐</span> addispower.com</div><div class="powered-by">Powered by <span>Addis Power</span> — Web, Design & Tech Support</div></div></body></html>`;
+        const cardHtml = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Business Card - ${name}</title><style>
+            body{background:#0d0d1a;display:flex;justify-content:center;align-items:center;min-height:100vh;font-family:'Space Grotesk',sans-serif;}
+            .card{width:350px;background:linear-gradient(135deg,#0f0f1c,#1a1a2e);border-radius:20px;padding:30px;border:1px solid rgba(139,92,246,0.4);text-align:center;}
+            .decorative-line{width:60px;height:2px;background:linear-gradient(90deg,#f59e0b,#8b5cf6);margin:0 auto 20px auto;border-radius:2px;}
+            .card-name{font-size:24px;font-weight:700;color:#fff;margin-bottom:8px;}
+            .card-title{color:#f59e0b;font-size:14px;margin-bottom:20px;}
+            .card-contact{font-size:12px;color:#a1a1aa;margin:10px 0;display:flex;align-items:center;justify-content:center;gap:10px;}
+            .bottom-line{width:40px;height:1px;background:rgba(139,92,246,0.3);margin:20px auto 15px auto;}
+            .credit{font-size:9px;color:#71717a;text-align:center;}.credit span{color:#f59e0b;}
+        </style></head><body>
+        <div class="card">
+            <div class="decorative-line"></div>
+            <div class="card-name">${name}</div>
+            <div class="card-title">${title}</div>
+            <div class="card-contact"><span>📞</span> ${phone}</div>
+            <div class="card-contact"><span>✉️</span> ${email}</div>
+            <div class="bottom-line"></div>
+            <div class="credit">Powered by <span>Addis Power</span> — Web, Design & Tech Support</div>
+        </div>
+        </body></html>`;
         const blob = new Blob([cardHtml], {type: 'text/html'});
         const a = document.createElement('a');
         a.href = URL.createObjectURL(blob);
         a.download = `Business_Card_${name.replace(/\s/g,'_')}.html`;
         document.body.appendChild(a); a.click(); document.body.removeChild(a);
         URL.revokeObjectURL(blob);
-        alert(`✅ Your business card is ready! Open the downloaded HTML file in any browser to view and print.\n\n"Powered by Addis Power" appears at the bottom.`);
+        alert(`✅ Your business card is ready! Open the downloaded HTML file in any browser to view and print.\n\nClean design with only your information.`);
         closeGiftModal(); document.getElementById('giftForm').reset();
     }
 
-    // Founder's card
     function downloadFounderCard() {
         const founderHtml = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Addis Abebayehu - Business Card</title><style>body{background:#0d0d1a;display:flex;justify-content:center;align-items:center;min-height:100vh;font-family:'Space Grotesk',sans-serif;}.card{width:350px;background:linear-gradient(135deg,#0f0f1c,#1a1a2e);border-radius:20px;padding:25px;border:1px solid rgba(139,92,246,0.4);}.logo{display:flex;align-items:center;gap:10px;margin-bottom:20px;}.logo-icon{width:40px;height:40px;background:linear-gradient(135deg,#8b5cf6,#06b6d4);border-radius:10px;display:flex;align-items:center;justify-content:center;}.logo-icon i{font-size:20px;color:white;}.logo-text h4{color:white;font-size:18px;}.logo-text p{color:#f59e0b;font-size:8px;}.card-name{font-size:22px;font-weight:bold;color:white;margin:15px 0 5px;}.card-title{color:#f59e0b;font-size:12px;margin-bottom:15px;}.card-contact{font-size:11px;color:#a1a1aa;margin:8px 0;display:flex;align-items:center;gap:8px;}</style></head><body><div class="card"><div class="logo"><div class="logo-icon"><i>🧠</i></div><div class="logo-text"><h4>Addis Power</h4><p>Web · AI · Support</p></div></div><div class="card-name">Addis Abebayehu</div><div class="card-title">Founder & Lead Developer</div><div class="card-contact"><span>📞</span> +251 911 573 334</div><div class="card-contact"><span>✈️</span> @addis_power</div><div class="card-contact"><span>✉️</span> addispower@proton.me</div><div class="card-contact"><span>🌐</span> addispower.com</div></div></body></html>`;
         const blob = new Blob([founderHtml], {type: 'text/html'});
@@ -361,9 +337,8 @@
         alert("✅ Founder's business card downloaded.");
     }
 
-    // Brochure with WHITE BACKGROUND
     function downloadBrochure() {
-        const brochureHtml = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Addis Power - Company Brochure</title><style>body{background:#ffffff;display:flex;justify-content:center;align-items:center;min-height:100vh;font-family:'Space Grotesk',sans-serif;margin:0;padding:20px;}.brochure{max-width:800px;background:#ffffff;border-radius:30px;padding:40px;border:1px solid #e0e0e0;margin:20px;box-shadow:0 10px 30px rgba(0,0,0,0.1);}.logo{display:flex;align-items:center;gap:10px;justify-content:center;margin-bottom:30px;}.logo-icon{width:50px;height:50px;background:linear-gradient(135deg,#8b5cf6,#06b6d4);border-radius:12px;display:flex;align-items:center;justify-content:center;}.logo-icon i{font-size:28px;color:white;}.logo-text h2{color:#1a1a2e;font-size:28px;margin:0;}.logo-text p{color:#f59e0b;margin:0;}.service-tag{display:inline-block;background:#f0f0f5;color:#1a1a2e;padding:8px 18px;border-radius:40px;margin:5px;font-size:14px;}.price-box{background:#f0f0f5;border-radius:20px;padding:20px;margin:20px 0;color:#1a1a2e;}.contact-line{margin:10px 0;color:#1a1a2e;}.contact-line i{color:#f59e0b;width:25px;}.header-text{color:#1a1a2e;text-align:center;margin-bottom:20px;}</style></head><body><div class="brochure"><div class="logo"><div class="logo-icon"><i>🧠</i></div><div class="logo-text"><h2>Addis Power</h2><p>Web · AI · Support</p></div></div><h1 style="text-align:center; color:#1a1a2e; margin-bottom:20px;">Complete Tech Solutions for Startups</h1><div style="text-align:center;"><span class="service-tag">🌐 Websites</span><span class="service-tag">📇 Business Cards</span><span class="service-tag">📊 Brochures</span><span class="service-tag">🛠️ Tech Support</span><span class="service-tag">🤖 AI Integration</span></div><div class="price-box"><h3 style="color:#f59e0b;">🔥 Startup Pricing</h3><p><strong>Starter:</strong> 7,000 ETB (5-page website + business card)</p><p><strong>Professional:</strong> 15,000 ETB (10-page + AI chatbot + business cards + brochure)</p><p><strong>Enterprise:</strong> Custom quote</p></div><div style="margin-top:30px;"><h3 style="color:#1a1a2e;">Contact Us</h3><p class="contact-line"><i class="fab fa-telegram"></i> @addis_power</p><p class="contact-line"><i class="fab fa-whatsapp"></i> +251 911 573 334</p><p class="contact-line"><i class="fas fa-envelope"></i> addispower@proton.me</p><p class="contact-line"><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p></div><div style="text-align:center; margin-top:30px; font-size:12px; color:#71717a;">© 2026 Addis Power — Empowering Ethiopian startups</div></div></body></html>`;
+        const brochureHtml = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Addis Power - Company Brochure</title><style>body{background:#ffffff;display:flex;justify-content:center;align-items:center;min-height:100vh;font-family:'Space Grotesk',sans-serif;}.brochure{max-width:800px;background:#ffffff;border-radius:30px;padding:40px;border:1px solid #e0e0e0;box-shadow:0 10px 30px rgba(0,0,0,0.1);}.logo{display:flex;align-items:center;gap:10px;justify-content:center;margin-bottom:30px;}.logo-icon{width:50px;height:50px;background:linear-gradient(135deg,#8b5cf6,#06b6d4);border-radius:12px;display:flex;align-items:center;justify-content:center;}.logo-icon i{font-size:28px;color:white;}.logo-text h2{color:#1a1a2e;font-size:28px;}.logo-text p{color:#f59e0b;}.service-tag{display:inline-block;background:#f0f0f5;color:#1a1a2e;padding:8px 18px;border-radius:40px;margin:5px;}.price-box{background:#f0f0f5;border-radius:20px;padding:20px;margin:20px 0;}.contact-line{margin:10px 0;color:#1a1a2e;}.contact-line i{color:#f59e0b;width:25px;}</style></head><body><div class="brochure"><div class="logo"><div class="logo-icon"><i>🧠</i></div><div class="logo-text"><h2>Addis Power</h2><p>Web · AI · Support</p></div></div><h1 style="text-align:center; color:#1a1a2e;">Complete Tech Solutions for Startups</h1><div style="text-align:center;"><span class="service-tag">🌐 Websites</span><span class="service-tag">📇 Business Cards</span><span class="service-tag">📊 Brochures</span><span class="service-tag">🛠️ Tech Support</span><span class="service-tag">🤖 AI Integration</span></div><div class="price-box"><h3 style="color:#f59e0b;">🔥 Startup Pricing</h3><p><strong>Starter:</strong> 7,000 ETB (5-page website + business card)</p><p><strong>Professional:</strong> 15,000 ETB (10-page + AI chatbot + business cards + brochure)</p><p><strong>Enterprise:</strong> Custom quote</p></div><div><h3 style="color:#1a1a2e;">Contact Us</h3><p class="contact-line"><i class="fab fa-telegram"></i> @addis_power</p><p class="contact-line"><i class="fab fa-whatsapp"></i> +251 911 573 334</p><p class="contact-line"><i class="fas fa-envelope"></i> addispower@proton.me</p></div><div style="text-align:center; margin-top:30px; font-size:12px; color:#71717a;">© 2026 Addis Power — Empowering Ethiopian startups</div></div></body></html>`;
         const blob = new Blob([brochureHtml], {type: 'text/html'});
         const a = document.createElement('a');
         a.href = URL.createObjectURL(blob);
@@ -373,7 +348,6 @@
         alert("✅ Company brochure downloaded with white background for easy printing!");
     }
 
-    // Chatbot
     function toggleChatbot() { document.getElementById('chatbotWindow').classList.toggle('active'); }
     function handleKeyPress(e) { if (e.key === 'Enter') sendMessage(); }
     function sendQuickReply(text) { document.getElementById('chatInput').value = text; sendMessage(); }
@@ -386,10 +360,9 @@
         setTimeout(() => {
             let response = '';
             const l = msg.toLowerCase();
-            if (l.includes('free') || l.includes('card')) response = "🎁 Click the floating 'Free Business Card!' button! Fill the form and get your custom card instantly, with 'Powered by Addis Power' at the bottom.";
-            else if (l.includes('price') || l.includes('pricing')) response = "Starter: 7,000 ETB (5-page website + business card), Professional: 15,000 ETB (10-page + AI chatbot + business cards + brochure). Enterprise custom.";
-            else if (l.includes('contact')) response = "Contact: 📞 +251 911 573 334 | 📱 Telegram: @addis_power | ✉️ addispower@proton.me";
-            else response = "Selam! 🇪🇹 Need a free business card, website, or tech support? Check our pricing section or click the gift button!";
+            if (l.includes('free') || l.includes('card')) response = "🎁 Click the floating 'Free Business Card!' button! Fill the form and get your clean, professional card with only your information.";
+            else if (l.includes('price') || l.includes('pricing')) response = "Starter: 7,000 ETB, Professional: 15,000 ETB, Enterprise: Custom. Check our Pricing section!";
+            else response = "Selam! 🇪🇹 Need a free business card (no logo, just you), website, or tech support? Click the gift button or check our pricing!";
             addMessage(response, 'bot');
         }, 500);
     }
