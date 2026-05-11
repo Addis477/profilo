@@ -56,7 +56,6 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        /* ========== ANIMATED BACKGROUND ========== */
         .bg-gradient {
             position: fixed;
             top: 0;
@@ -74,21 +73,11 @@
         }
 
         @keyframes bgShift {
-            0% {
-                opacity: 0.7;
-                transform: scale(1) rotate(0deg);
-            }
-            50% {
-                opacity: 1;
-                transform: scale(1.05) rotate(1deg);
-            }
-            100% {
-                opacity: 0.7;
-                transform: scale(1) rotate(0deg);
-            }
+            0% { opacity: 0.7; transform: scale(1) rotate(0deg); }
+            50% { opacity: 1; transform: scale(1.05) rotate(1deg); }
+            100% { opacity: 0.7; transform: scale(1) rotate(0deg); }
         }
 
-        /* ========== CONTAINER ========== */
         .container {
             max-width: 1400px;
             margin: 0 auto;
@@ -174,7 +163,6 @@
             font-weight: 500;
         }
 
-        /* ========== NAVIGATION ========== */
         .mobile-menu-btn {
             display: none;
             background: rgba(255,255,255,0.04);
@@ -226,9 +214,7 @@
             border-color: rgba(139,92,246,0.3);
             transform: translateY(-2px);
         }
-        .nav-link:hover i {
-            color: #fff;
-        }
+        .nav-link:hover i { color: #fff; }
 
         .nav-link.highlight {
             background: linear-gradient(135deg, var(--purple), var(--amber));
@@ -243,6 +229,19 @@
             transform: translateY(-3px);
         }
 
+        /* Brochure button special style */
+        .nav-link.brochure-btn {
+            background: linear-gradient(135deg, var(--cyan), var(--purple));
+            color: #fff;
+            border: none;
+            font-weight: 600;
+        }
+        .nav-link.brochure-btn i { color: #fff; }
+        .nav-link.brochure-btn:hover {
+            box-shadow: 0 8px 25px rgba(6,182,212,0.35);
+            transform: translateY(-3px);
+        }
+
         /* ========== HERO ========== */
         .hero {
             display: grid;
@@ -252,9 +251,7 @@
             padding: 70px 0 90px;
         }
 
-        .hero-content {
-            animation: fadeInUp 0.8s ease-out;
-        }
+        .hero-content { animation: fadeInUp 0.8s ease-out; }
 
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(35px); }
@@ -385,9 +382,7 @@
             transform: translateY(-3px);
         }
 
-        .hero-visual {
-            animation: fadeInRight 0.8s ease-out;
-        }
+        .hero-visual { animation: fadeInRight 0.8s ease-out; }
 
         @keyframes fadeInRight {
             from { opacity: 0; transform: translateX(35px); }
@@ -531,9 +526,7 @@
             opacity: 1;
             transform: scale(1.1);
         }
-        .portfolio-info {
-            padding: 22px;
-        }
+        .portfolio-info { padding: 22px; }
         .portfolio-category {
             font-size: 11px;
             color: var(--amber);
@@ -542,16 +535,8 @@
             margin-bottom: 6px;
             font-weight: 600;
         }
-        .portfolio-info h3 {
-            font-size: 19px;
-            margin-bottom: 6px;
-            font-weight: 600;
-        }
-        .portfolio-info p {
-            color: var(--text-muted);
-            font-size: 13px;
-            line-height: 1.5;
-        }
+        .portfolio-info h3 { font-size: 19px; margin-bottom: 6px; font-weight: 600; }
+        .portfolio-info p { color: var(--text-muted); font-size: 13px; line-height: 1.5; }
 
         /* ========== ABOUT ========== */
         .about-grid {
@@ -569,23 +554,10 @@
             box-shadow: var(--shadow-md);
             transition: var(--transition);
         }
-        .about-image:hover {
-            border-color: var(--amber);
-            box-shadow: var(--shadow-lg);
-        }
-        .about-image img {
-            width: 100%;
-            display: block;
-            transition: var(--transition-slow);
-        }
-        .about-image:hover img {
-            transform: scale(1.03);
-        }
-        .about-content h3 {
-            font-size: 30px;
-            margin-bottom: 6px;
-            font-weight: 700;
-        }
+        .about-image:hover { border-color: var(--amber); box-shadow: var(--shadow-lg); }
+        .about-image img { width: 100%; display: block; transition: var(--transition-slow); }
+        .about-image:hover img { transform: scale(1.03); }
+        .about-content h3 { font-size: 30px; margin-bottom: 6px; font-weight: 700; }
         .about-title {
             font-size: 15px;
             color: var(--amber);
@@ -596,17 +568,8 @@
             border-radius: 30px;
             font-weight: 500;
         }
-        .about-content p {
-            color: var(--text-muted);
-            line-height: 1.8;
-            margin-bottom: 22px;
-            font-size: 15px;
-        }
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
+        .about-content p { color: var(--text-muted); line-height: 1.8; margin-bottom: 22px; font-size: 15px; }
+        .skills { display: flex; flex-wrap: wrap; gap: 10px; }
         .skill-tag {
             background: rgba(139,92,246,0.12);
             border: 1px solid rgba(139,92,246,0.25);
@@ -617,10 +580,7 @@
             transition: var(--transition-fast);
             font-weight: 500;
         }
-        .skill-tag:hover {
-            border-color: var(--amber);
-            background: rgba(245,158,11,0.1);
-        }
+        .skill-tag:hover { border-color: var(--amber); background: rgba(245,158,11,0.1); }
 
         /* ========== TESTIMONIALS ========== */
         .testimonials-grid {
@@ -637,40 +597,16 @@
             border: 1px solid var(--border-subtle);
             transition: var(--transition);
         }
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(139,92,246,0.3);
-            box-shadow: var(--shadow-md);
-        }
-        .testimonial-quote {
-            font-size: 36px;
-            color: var(--amber);
-            opacity: 0.3;
-            margin-bottom: 14px;
-            line-height: 1;
-        }
-        .testimonial-text {
-            font-size: 15px;
-            line-height: 1.7;
-            color: var(--text-secondary);
-            margin-bottom: 22px;
-        }
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
+        .testimonial-card:hover { transform: translateY(-5px); border-color: rgba(139,92,246,0.3); box-shadow: var(--shadow-md); }
+        .testimonial-quote { font-size: 36px; color: var(--amber); opacity: 0.3; margin-bottom: 14px; line-height: 1; }
+        .testimonial-text { font-size: 15px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 22px; }
+        .testimonial-author { display: flex; align-items: center; gap: 14px; }
         .author-avatar {
-            width: 50px;
-            height: 50px;
+            width: 50px; height: 50px;
             background: linear-gradient(135deg, var(--amber), var(--purple));
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            font-weight: 700;
-            color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px; font-weight: 700; color: #fff;
         }
 
         /* ========== PRICING ========== */
@@ -696,51 +632,17 @@
         }
         .pricing-card.featured::before {
             content: '⭐ Most Popular';
-            position: absolute;
-            top: 22px;
-            right: -32px;
+            position: absolute; top: 22px; right: -32px;
             background: linear-gradient(135deg, var(--amber), var(--purple));
-            color: #fff;
-            padding: 5px 38px;
-            font-size: 11px;
-            font-weight: 600;
-            transform: rotate(45deg);
-            letter-spacing: 0.5px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            color: #fff; padding: 5px 38px; font-size: 11px; font-weight: 600;
+            transform: rotate(45deg); letter-spacing: 0.5px; box-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
-        .pricing-card:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-md);
-        }
-        .price-amount {
-            font-size: 44px;
-            font-weight: 700;
-            color: var(--amber);
-            letter-spacing: -1px;
-        }
-        .price-note {
-            font-size: 13px;
-            color: #10b981;
-            margin-top: 4px;
-            font-weight: 500;
-        }
-        .pricing-card h3 {
-            margin: 14px 0;
-            font-size: 20px;
-            font-weight: 600;
-        }
-        .price-features {
-            list-style: none;
-            margin: 25px 0;
-        }
-        .price-features li {
-            padding: 9px 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--text-muted);
-            font-size: 14px;
-        }
+        .pricing-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+        .price-amount { font-size: 44px; font-weight: 700; color: var(--amber); letter-spacing: -1px; }
+        .price-note { font-size: 13px; color: #10b981; margin-top: 4px; font-weight: 500; }
+        .pricing-card h3 { margin: 14px 0; font-size: 20px; font-weight: 600; }
+        .price-features { list-style: none; margin: 25px 0; }
+        .price-features li { padding: 9px 0; display: flex; align-items: center; gap: 10px; color: var(--text-muted); font-size: 14px; }
         .price-features i { color: var(--amber); font-size: 14px; }
 
         /* ========== TECH SUPPORT ========== */
@@ -766,30 +668,11 @@
             transition: var(--transition);
             text-align: center;
         }
-        .support-plan:hover {
-            border-color: rgba(139,92,246,0.3);
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-sm);
-        }
-        .support-plan i {
-            font-size: 36px;
-            color: var(--amber);
-            margin-bottom: 12px;
-        }
-        .support-plan h3 {
-            font-size: 20px;
-            margin: 12px 0;
-            font-weight: 600;
-        }
-        .support-plan ul {
-            list-style: none;
-            margin-top: 16px;
-        }
-        .support-plan li {
-            padding: 7px 0;
-            color: var(--text-muted);
-            font-size: 13px;
-        }
+        .support-plan:hover { border-color: rgba(139,92,246,0.3); transform: translateY(-4px); box-shadow: var(--shadow-sm); }
+        .support-plan i { font-size: 36px; color: var(--amber); margin-bottom: 12px; }
+        .support-plan h3 { font-size: 20px; margin: 12px 0; font-weight: 600; }
+        .support-plan ul { list-style: none; margin-top: 16px; }
+        .support-plan li { padding: 7px 0; color: var(--text-muted); font-size: 13px; }
 
         /* ========== CONTACT ========== */
         .contact-card {
@@ -801,36 +684,19 @@
             text-align: center;
             margin: 30px 0;
         }
-        .contact-card h2 {
-            font-size: 36px;
-            margin-bottom: 16px;
-        }
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            margin: 35px 0;
-            flex-wrap: wrap;
-        }
+        .contact-card h2 { font-size: 36px; margin-bottom: 16px; }
+        .social-links { display: flex; justify-content: center; gap: 16px; margin: 35px 0; flex-wrap: wrap; }
         .social-link {
-            width: 50px;
-            height: 50px;
+            width: 50px; height: 50px;
             background: rgba(255,255,255,0.04);
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            text-decoration: none;
-            font-size: 20px;
-            transition: var(--transition);
-            border: 1px solid var(--border-medium);
+            display: flex; align-items: center; justify-content: center;
+            color: #fff; text-decoration: none; font-size: 20px;
+            transition: var(--transition); border: 1px solid var(--border-medium);
         }
         .social-link:hover {
             background: linear-gradient(135deg, var(--amber), var(--purple));
-            transform: translateY(-5px);
-            border-color: transparent;
-            box-shadow: var(--shadow-amber);
+            transform: translateY(-5px); border-color: transparent; box-shadow: var(--shadow-amber);
         }
 
         /* ========== FOOTER ========== */
@@ -845,66 +711,33 @@
             gap: 35px;
             margin-bottom: 30px;
         }
-        .footer-logo h3 {
-            font-size: 19px;
-            margin-bottom: 8px;
-        }
-        .footer-logo p {
-            color: var(--text-dim);
-            font-size: 13px;
-            line-height: 1.6;
-        }
-        .footer-links h4 {
-            font-size: 15px;
-            margin-bottom: 18px;
-            color: #fff;
-            font-weight: 600;
-        }
+        .footer-logo h3 { font-size: 19px; margin-bottom: 8px; }
+        .footer-logo p { color: var(--text-dim); font-size: 13px; line-height: 1.6; }
+        .footer-links h4 { font-size: 15px; margin-bottom: 18px; color: #fff; font-weight: 600; }
         .footer-links a {
-            display: block;
-            color: var(--text-dim);
-            text-decoration: none;
-            margin-bottom: 10px;
-            font-size: 13px;
-            transition: var(--transition-fast);
+            display: block; color: var(--text-dim); text-decoration: none;
+            margin-bottom: 10px; font-size: 13px; transition: var(--transition-fast);
         }
-        .footer-links a:hover {
-            color: var(--amber);
-            transform: translateX(4px);
-        }
+        .footer-links a:hover { color: var(--amber); transform: translateX(4px); }
         .footer-bottom {
-            text-align: center;
-            padding-top: 28px;
+            text-align: center; padding-top: 28px;
             border-top: 1px solid var(--border-subtle);
-            color: var(--text-dim);
-            font-size: 13px;
+            color: var(--text-dim); font-size: 13px;
         }
 
         /* ========== MODAL ========== */
         .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.8);
-            backdrop-filter: blur(12px);
-            z-index: 2000;
-            align-items: center;
-            justify-content: center;
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8); backdrop-filter: blur(12px);
+            z-index: 2000; align-items: center; justify-content: center;
         }
         .modal.active { display: flex; }
         .modal-content {
             background: linear-gradient(135deg, #14142e, #0d0d1f);
-            border-radius: var(--radius-lg);
-            padding: 36px;
-            max-width: 480px;
-            width: 90%;
+            border-radius: var(--radius-lg); padding: 36px;
+            max-width: 520px; width: 90%;
             border: 1px solid rgba(139,92,246,0.35);
-            position: relative;
-            animation: modalFadeIn 0.3s ease;
-            box-shadow: var(--shadow-lg);
+            position: relative; animation: modalFadeIn 0.3s ease; box-shadow: var(--shadow-lg);
         }
         @keyframes modalFadeIn {
             from { opacity: 0; transform: scale(0.92) translateY(20px); }
@@ -914,82 +747,48 @@
         .modal-header i { font-size: 45px; color: var(--amber); margin-bottom: 12px; display: block; }
         .modal-header h2 { font-size: 26px; margin-bottom: 8px; }
         .modal-header p { color: var(--text-muted); font-size: 13px; line-height: 1.5; }
-        .form-group { margin-bottom: 16px; }
-        .form-group input {
-            width: 100%;
-            padding: 13px 16px;
+        .form-group { margin-bottom: 14px; }
+        .form-group input, .form-group textarea {
+            width: 100%; padding: 13px 16px;
             background: rgba(255,255,255,0.04);
             border: 1px solid var(--border-medium);
             border-radius: var(--radius-sm);
-            color: #fff;
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 14px;
-            transition: var(--transition-fast);
+            color: #fff; font-family: 'Space Grotesk', sans-serif;
+            font-size: 14px; transition: var(--transition-fast);
         }
-        .form-group input:focus {
-            outline: none;
-            border-color: var(--amber);
-            background: rgba(255,255,255,0.07);
-            box-shadow: 0 0 0 3px rgba(245,158,11,0.08);
+        .form-group textarea { resize: vertical; min-height: 60px; }
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none; border-color: var(--amber);
+            background: rgba(255,255,255,0.07); box-shadow: 0 0 0 3px rgba(245,158,11,0.08);
         }
-        .form-group input::placeholder { color: var(--text-dim); }
+        .form-group input::placeholder, .form-group textarea::placeholder { color: var(--text-dim); }
+        .form-group small { color: var(--text-dim); font-size: 11px; display: block; margin-top: 4px; }
         .modal-submit {
-            width: 100%;
-            padding: 14px;
+            width: 100%; padding: 14px;
             background: linear-gradient(135deg, var(--amber), var(--purple));
-            border: none;
-            border-radius: 40px;
-            color: #fff;
-            font-weight: 600;
-            font-size: 15px;
-            cursor: pointer;
-            transition: var(--transition);
-            margin-top: 8px;
-            font-family: 'Space Grotesk', sans-serif;
-            letter-spacing: 0.3px;
+            border: none; border-radius: 40px; color: #fff; font-weight: 600;
+            font-size: 15px; cursor: pointer; transition: var(--transition);
+            margin-top: 8px; font-family: 'Space Grotesk', sans-serif; letter-spacing: 0.3px;
         }
-        .modal-submit:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-purple);
-        }
+        .modal-submit:hover { transform: translateY(-2px); box-shadow: var(--shadow-purple); }
         .modal-close {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            font-size: 20px;
-            cursor: pointer;
-            color: var(--text-muted);
-            transition: var(--transition-fast);
-            width: 36px;
-            height: 36px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.03);
+            position: absolute; top: 16px; right: 16px; font-size: 20px;
+            cursor: pointer; color: var(--text-muted); transition: var(--transition-fast);
+            width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
+            border-radius: 50%; background: rgba(255,255,255,0.03);
         }
         .modal-close:hover { color: var(--amber); background: rgba(255,255,255,0.08); }
 
         /* ========== FLOATING ELEMENTS ========== */
         .floating-gift {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
+            position: fixed; bottom: 30px; right: 30px;
             background: linear-gradient(135deg, var(--amber), var(--pink));
-            padding: 12px 22px;
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            cursor: pointer;
-            z-index: 100;
+            padding: 12px 22px; border-radius: 50px;
+            display: flex; align-items: center; gap: 10px;
+            cursor: pointer; z-index: 100;
             box-shadow: 0 6px 25px rgba(245,158,11,0.45);
-            transition: var(--transition);
-            animation: floatGift 2.5s ease-in-out infinite;
-            border: none;
-            font-weight: 600;
-            color: #fff;
-            font-size: 14px;
+            transition: var(--transition); animation: floatGift 2.5s ease-in-out infinite;
+            border: none; font-weight: 600; color: #fff; font-size: 14px;
             font-family: 'Space Grotesk', sans-serif;
         }
         @keyframes floatGift {
@@ -997,28 +796,14 @@
             50% { transform: translateY(-6px); }
         }
         .floating-gift i { font-size: 20px; }
-        .floating-gift:hover {
-            transform: scale(1.06);
-            box-shadow: 0 10px 35px rgba(245,158,11,0.6);
-        }
+        .floating-gift:hover { transform: scale(1.06); box-shadow: 0 10px 35px rgba(245,158,11,0.6); }
 
         .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            left: 30px;
-            background: #25D366;
-            width: 52px;
-            height: 52px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 26px;
-            color: #fff;
-            text-decoration: none;
-            z-index: 100;
-            transition: var(--transition);
-            box-shadow: 0 6px 25px rgba(37,211,102,0.35);
+            position: fixed; bottom: 30px; left: 30px;
+            background: #25D366; width: 52px; height: 52px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 26px; color: #fff; text-decoration: none; z-index: 100;
+            transition: var(--transition); box-shadow: 0 6px 25px rgba(37,211,102,0.35);
             animation: pulseGreen 2.5s infinite;
         }
         @keyframes pulseGreen {
@@ -1026,192 +811,15 @@
             50% { box-shadow: 0 6px 35px rgba(37,211,102,0.6); }
         }
         .telegram-float {
-            position: fixed;
-            bottom: 30px;
-            left: 100px;
-            background: #0088cc;
-            width: 52px;
-            height: 52px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 26px;
-            color: #fff;
-            text-decoration: none;
-            z-index: 100;
-            transition: var(--transition);
-            box-shadow: 0 6px 25px rgba(0,136,204,0.35);
+            position: fixed; bottom: 30px; left: 100px;
+            background: #0088cc; width: 52px; height: 52px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 26px; color: #fff; text-decoration: none; z-index: 100;
+            transition: var(--transition); box-shadow: 0 6px 25px rgba(0,136,204,0.35);
         }
-        .whatsapp-float:hover,
-        .telegram-float:hover {
-            transform: scale(1.12);
-            box-shadow: 0 10px 35px rgba(0,0,0,0.3);
+        .whatsapp-float:hover, .telegram-float:hover {
+            transform: scale(1.12); box-shadow: 0 10px 35px rgba(0,0,0,0.3);
         }
-
-        /* ========== CHATBOT ========== */
-        .chatbot-container {
-            position: fixed;
-            bottom: 30px;
-            right: 140px;
-            z-index: 1000;
-        }
-        .chatbot-toggle {
-            width: 52px;
-            height: 52px;
-            background: linear-gradient(135deg, var(--amber), var(--purple));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 8px 25px rgba(139,92,246,0.4);
-            transition: var(--transition);
-            animation: pulseGlow 2.5s infinite;
-        }
-        @keyframes pulseGlow {
-            0%,100% { box-shadow: 0 8px 25px rgba(139,92,246,0.35); }
-            50% { box-shadow: 0 12px 35px rgba(245,158,11,0.5); }
-        }
-        .chatbot-toggle:hover { transform: scale(1.08); }
-        .chatbot-toggle i { font-size: 24px; color: #fff; }
-        .chatbot-window {
-            position: absolute;
-            bottom: 70px;
-            right: 0;
-            width: 340px;
-            height: 460px;
-            background: rgba(13,13,28,0.98);
-            backdrop-filter: blur(35px);
-            border-radius: var(--radius-md);
-            border: 1px solid rgba(139,92,246,0.35);
-            display: none;
-            flex-direction: column;
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-        }
-        .chatbot-window.active { display: flex; }
-        .chatbot-header {
-            background: linear-gradient(135deg, var(--amber), var(--purple));
-            padding: 14px 16px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .chatbot-avatar {
-            width: 36px;
-            height: 36px;
-            background: #fff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .chatbot-avatar i { font-size: 18px; color: var(--amber); }
-        .chatbot-close {
-            margin-left: auto;
-            cursor: pointer;
-            width: 28px;
-            height: 28px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.1);
-            transition: var(--transition-fast);
-            font-size: 12px;
-        }
-        .chatbot-close:hover { background: rgba(255,255,255,0.25); }
-        .chatbot-messages {
-            flex: 1;
-            padding: 14px;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .message { display: flex; gap: 7px; }
-        .message.bot { align-items: flex-start; }
-        .message.user { flex-direction: row-reverse; }
-        .message-avatar {
-            width: 26px;
-            height: 26px;
-            background: linear-gradient(135deg, var(--amber), var(--purple));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 10px;
-            flex-shrink: 0;
-        }
-        .message-content {
-            background: rgba(255,255,255,0.06);
-            padding: 9px 12px;
-            border-radius: 16px;
-            max-width: 75%;
-            font-size: 12px;
-            line-height: 1.5;
-            color: var(--text-secondary);
-        }
-        .message.user .message-content {
-            background: linear-gradient(135deg, var(--amber), var(--purple));
-            color: #fff;
-        }
-        .quick-replies {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 7px;
-            padding: 10px 14px;
-            border-top: 1px solid var(--border-subtle);
-        }
-        .quick-reply {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(139,92,246,0.25);
-            padding: 5px 11px;
-            border-radius: 25px;
-            font-size: 10px;
-            cursor: pointer;
-            transition: var(--transition-fast);
-            color: var(--text-muted);
-            font-family: 'Space Grotesk', sans-serif;
-        }
-        .quick-reply:hover {
-            background: rgba(139,92,246,0.18);
-            border-color: var(--amber);
-            color: #fff;
-        }
-        .chatbot-input {
-            padding: 10px 14px;
-            display: flex;
-            gap: 7px;
-            border-top: 1px solid var(--border-subtle);
-        }
-        .chatbot-input input {
-            flex: 1;
-            background: rgba(255,255,255,0.04);
-            border: 1px solid var(--border-medium);
-            padding: 9px 12px;
-            border-radius: 25px;
-            color: #fff;
-            font-size: 12px;
-            outline: none;
-            font-family: 'Space Grotesk', sans-serif;
-            transition: var(--transition-fast);
-        }
-        .chatbot-input input:focus { border-color: var(--amber); }
-        .chatbot-input button {
-            width: 36px;
-            height: 36px;
-            background: linear-gradient(135deg, var(--amber), var(--purple));
-            border: none;
-            border-radius: 50%;
-            color: #fff;
-            font-size: 14px;
-            cursor: pointer;
-            transition: var(--transition-fast);
-            flex-shrink: 0;
-        }
-        .chatbot-input button:hover { transform: scale(1.08); }
 
         /* ========== RESPONSIVE ========== */
         @media (max-width: 900px) {
@@ -1222,10 +830,8 @@
             .about-grid { grid-template-columns: 1fr; gap: 40px; }
             .about-image { max-width: 350px; margin: 0 auto; }
             .skills { justify-content: center; }
-            .chatbot-container { right: 30px; bottom: 110px; }
             .floating-gift { bottom: 100px; }
         }
-
         @media (max-width: 768px) {
             .container { padding: 0 20px; }
             nav { display: none; width: 100%; flex-direction: column; align-items: center; padding-top: 10px; }
@@ -1237,14 +843,8 @@
             .floating-gift i { font-size: 16px; }
             .whatsapp-float { bottom: 20px; left: 15px; width: 44px; height: 44px; font-size: 22px; }
             .telegram-float { bottom: 20px; left: 72px; width: 44px; height: 44px; font-size: 22px; }
-            .chatbot-container { right: 15px; bottom: 100px; }
-            .chatbot-window { width: 290px; height: 400px; right: 0; }
         }
-
-        @media (min-width: 769px) {
-            nav { display: flex !important; }
-        }
-
+        @media (min-width: 769px) { nav { display: flex !important; } }
         @media (max-width: 480px) {
             .hero h1 { font-size: 32px; }
             .section-title h2 { font-size: 26px; }
@@ -1291,6 +891,7 @@
                 <a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a>
                 <a href="#testimonials" class="nav-link"><i class="fas fa-star"></i> Testimonials</a>
                 <a href="#pricing" class="nav-link"><i class="fas fa-tag"></i> Pricing</a>
+                <a href="brochure.html" class="nav-link brochure-btn" target="_blank"><i class="fas fa-print"></i> Brochure</a>
                 <a href="#contact" class="nav-link highlight"><i class="fas fa-bolt"></i> Contact</a>
             </nav>
         </header>
@@ -1446,20 +1047,41 @@
         </footer>
     </div>
 
-    <!-- ========== GIFT MODAL ========== -->
+    <!-- ========== GIFT MODAL (SIMPLIFIED) ========== -->
     <div id="giftModal" class="modal">
         <div class="modal-content">
             <div class="modal-close" onclick="closeGiftModal()"><i class="fas fa-times"></i></div>
             <div class="modal-header">
                 <i class="fas fa-gift"></i>
                 <h2>🎁 Free Business Card</h2>
-                <p>Fill out to get your personalized business card!<br><strong style="color:var(--amber);">Powered by Addis Power</strong></p>
+                <p>Fill out below to get your personalized business card!<br><strong style="color:var(--amber);">Powered by Addis Power</strong></p>
             </div>
             <form id="giftForm" onsubmit="generateBusinessCard(event)">
-                <div class="form-group"><input type="text" id="fullName" placeholder="Full Name" required></div>
-                <div class="form-group"><input type="email" id="email" placeholder="Email Address" required></div>
-                <div class="form-group"><input type="tel" id="phone" placeholder="Phone Number" required></div>
-                <div class="form-group"><input type="text" id="jobTitle" placeholder="Job Title / Position" required></div>
+                <div class="form-group">
+                    <input type="text" id="fullName" placeholder="Full Name *" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="jobTitle" placeholder="Job Title / Position (optional)">
+                    <small>Optional — leave blank if not needed</small>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email Address *" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" placeholder="Phone Number *" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="telegram" placeholder="Telegram Username (optional)">
+                    <small>Optional — e.g., @yourname</small>
+                </div>
+                <div class="form-group">
+                    <input type="url" id="website" placeholder="Website URL (optional)">
+                    <small>Optional — e.g., https://yourbusiness.com</small>
+                </div>
+                <div class="form-group">
+                    <input type="url" id="logoUrl" placeholder="Your Logo URL (optional)">
+                    <small>Optional — direct link to your logo image</small>
+                </div>
                 <button type="submit" class="modal-submit"><i class="fas fa-download"></i> Generate & Download My Business Card</button>
             </form>
         </div>
@@ -1470,17 +1092,6 @@
         <i class="fas fa-gift"></i>
         <span>Free Business Card!</span>
     </button>
-
-    <!-- ========== CHATBOT ========== -->
-    <div class="chatbot-container">
-        <div class="chatbot-toggle" onclick="toggleChatbot()" aria-label="Chat with AI"><i class="fas fa-robot"></i></div>
-        <div class="chatbot-window" id="chatbotWindow">
-            <div class="chatbot-header"><div class="chatbot-avatar"><i class="fas fa-brain"></i></div><div><h4 style="font-size:14px;">Addis Power AI</h4><p style="font-size:10px;opacity:0.9;"><i class="fas fa-circle" style="font-size:7px;color:#10b981;"></i> Online</p></div><div class="chatbot-close" onclick="toggleChatbot()"><i class="fas fa-times"></i></div></div>
-            <div class="chatbot-messages" id="chatMessages"><div class="message bot"><div class="message-avatar"><i class="fas fa-brain"></i></div><div class="message-content">Selam! 🇪🇹 Want a FREE business card? Click the 🎁 gift button! Need website or tech support? Prices start at 7,000 ETB!</div></div></div>
-            <div class="quick-replies"><span class="quick-reply" onclick="sendQuickReply('Free business card')">🎁 Free Card</span><span class="quick-reply" onclick="sendQuickReply('Website price')">🌐 Website</span><span class="quick-reply" onclick="sendQuickReply('Contact info')">📞 Contact</span></div>
-            <div class="chatbot-input"><input type="text" id="chatInput" placeholder="Type message..." onkeypress="handleKeyPress(event)" aria-label="Chat message"><button onclick="sendMessage()" aria-label="Send"><i class="fas fa-paper-plane"></i></button></div>
-        </div>
-    </div>
 
     <!-- ========== SOCIAL FLOATS ========== -->
     <a href="https://wa.me/251911573334" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
@@ -1499,9 +1110,20 @@
             const name = document.getElementById('fullName').value.trim();
             const email = document.getElementById('email').value.trim();
             const phone = document.getElementById('phone').value.trim();
-            const title = document.getElementById('jobTitle').value.trim();
-            if (!name || !email || !phone || !title) { alert("Please fill all fields!"); return; }
-            const cardHTML = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Business Card - ${name}</title><style>*{margin:0;padding:0;box-sizing:border-box}body{background:#0d0d1a;display:flex;justify-content:center;align-items:center;min-height:100vh;font-family:'Space Grotesk',Arial,sans-serif}.card{width:350px;background:linear-gradient(135deg,#0f0f1c,#1a1a2e);border-radius:20px;padding:25px;border:1px solid rgba(139,92,246,0.4);box-shadow:0 20px 40px rgba(0,0,0,0.5)}.logo{display:flex;align-items:center;gap:10px;margin-bottom:20px}.logo-icon{width:40px;height:40px;background:linear-gradient(135deg,#8b5cf6,#06b6d4);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;color:white}.logo-text h4{color:white;font-size:18px}.logo-text p{color:#f59e0b;font-size:8px}.card-name{font-size:22px;font-weight:bold;color:white;margin:15px 0 5px}.card-title{color:#f59e0b;font-size:12px;margin-bottom:15px}.card-contact{font-size:11px;color:#a1a1aa;margin:8px 0;display:flex;align-items:center;gap:8px}.powered-by{margin-top:20px;padding-top:15px;border-top:1px solid rgba(139,92,246,0.3);text-align:center;font-size:9px;color:#71717a}.powered-by span{color:#f59e0b;font-weight:bold}</style></head><body><div class="card"><div class="logo"><div class="logo-icon">🧠</div><div class="logo-text"><h4>Addis Power</h4><p>Web · AI · Support</p></div></div><div class="card-name">${name}</div><div class="card-title">${title}</div><div class="card-contact">📞 ${phone}</div><div class="card-contact">✉️ ${email}</div><div class="card-contact">🌐 addispower.com</div><div class="powered-by">Powered by <span>Addis Power</span> — Web, Design & Tech Support</div></div></body></html>`;
+            const title = document.getElementById('jobTitle').value.trim() || '';
+            const telegram = document.getElementById('telegram').value.trim() || '';
+            const website = document.getElementById('website').value.trim() || '';
+            const logoUrl = document.getElementById('logoUrl').value.trim() || '';
+
+            if (!name || !email || !phone) { alert("Please fill in Name, Email, and Phone at minimum!"); return; }
+
+            const logoSection = logoUrl ? `<img src="${logoUrl}" alt="Logo" style="max-width:80px;max-height:80px;margin-bottom:15px;border-radius:8px;">` : '';
+            const titleSection = title ? `<div class="card-title">${title}</div>` : '';
+            const telegramSection = telegram ? `<div class="card-contact">📱 ${telegram}</div>` : '';
+            const websiteSection = website ? `<div class="card-contact">🌐 ${website}</div>` : '';
+
+            const cardHTML = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Business Card - ${name}</title><style>*{margin:0;padding:0;box-sizing:border-box}body{background:#0d0d1a;display:flex;justify-content:center;align-items:center;min-height:100vh;font-family:'Space Grotesk',Arial,sans-serif}.card{width:380px;background:linear-gradient(135deg,#0f0f1c,#1a1a2e);border-radius:24px;padding:30px;border:2px solid rgba(139,92,246,0.4);box-shadow:0 25px 50px rgba(0,0,0,0.5);text-align:center}.logo-section{margin-bottom:18px}.logo-text h4{color:white;font-size:20px}.logo-text p{color:#f59e0b;font-size:9px;letter-spacing:1px}.card-name{font-size:24px;font-weight:bold;color:white;margin:15px 0 5px}.card-title{color:#f59e0b;font-size:13px;margin-bottom:18px;font-weight:500}.card-contact{font-size:12px;color:#a1a1aa;margin:10px 0;display:flex;align-items:center;justify-content:center;gap:8px}.divider{width:40px;height:2px;background:linear-gradient(135deg,#8b5cf6,#06b6d4);margin:18px auto;border-radius:2px}.powered-by{margin-top:20px;padding-top:15px;border-top:1px solid rgba(139,92,246,0.3);font-size:9px;color:#71717a}.powered-by span{color:#f59e0b;font-weight:bold}</style></head><body><div class="card"><div class="logo-section">${logoSection}<div class="logo-text"><h4>Addis Power</h4><p>Web · AI · Support</p></div></div><div class="card-name">${name}</div>${titleSection}<div class="divider"></div><div class="card-contact">✉️ ${email}</div><div class="card-contact">📞 ${phone}</div>${telegramSection}${websiteSection}<div class="powered-by">Powered by <span>Addis Power</span> — Web, Design & Tech Support</div></div></body></html>`;
+
             const blob = new Blob([cardHTML], { type: 'text/html' });
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
@@ -1511,37 +1133,9 @@
             a.click();
             document.body.removeChild(a);
             URL.revokeObjectURL(url);
-            alert(`✅ Business Card Generated!\n\nName: ${name}\nTitle: ${title}\n\nDownloaded! Open it in any browser to view.\n📌 For print-ready PDF, contact @powr_addis on Telegram.`);
+            alert(`✅ Business Card Generated!\n\nName: ${name}\n\nDownloaded! Open it in any browser to view.\n📌 For print-ready PDF, contact @powr_addis on Telegram.`);
             closeGiftModal();
             document.getElementById('giftForm').reset();
-        }
-
-        function toggleChatbot() { document.getElementById('chatbotWindow').classList.toggle('active'); }
-        function handleKeyPress(e) { if (e.key === 'Enter') sendMessage(); }
-        function sendQuickReply(text) { document.getElementById('chatInput').value = text; sendMessage(); }
-        function sendMessage() {
-            const input = document.getElementById('chatInput');
-            const msg = input.value.trim();
-            if (!msg) return;
-            addMessage(msg, 'user');
-            input.value = '';
-            setTimeout(() => {
-                let response = '';
-                const l = msg.toLowerCase();
-                if (l.includes('free') || l.includes('card') || l.includes('gift')) response = "🎁 Yes! Click the floating button on the bottom right. Fill the form and get your personalized business card instantly!";
-                else if (l.includes('price') || l.includes('website')) response = "Our pricing: Starter 7,000 ETB (5-page + business card), Professional 15,000 ETB (10-page + AI chatbot + cards + brochure). Free consultation!";
-                else if (l.includes('contact') || l.includes('phone') || l.includes('telegram')) response = "📞 +251 911 573 334 | 📱 Telegram: @powr_addis | ✉️ agoodperception@gmail.com";
-                else response = "Selam! 🇪🇹 Want a FREE business card? Click the 🎁 gift button! Need website or tech support? Prices start at 7,000 ETB!";
-                addMessage(response, 'bot');
-            }, 500);
-        }
-        function addMessage(text, sender) {
-            const div = document.createElement('div');
-            div.className = `message ${sender}`;
-            div.innerHTML = `<div class="message-avatar"><i class="fas ${sender==='bot'?'fa-brain':'fa-user'}"></i></div><div class="message-content">${text}</div>`;
-            const msgs = document.getElementById('chatMessages');
-            msgs.appendChild(div);
-            msgs.scrollTop = msgs.scrollHeight;
         }
     </script>
 </body>
